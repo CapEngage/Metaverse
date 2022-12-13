@@ -1,0 +1,59 @@
+<div class="flex flex-col flex-auto min-w-0">
+  <div>
+    <header class="subhead">
+      <div class="subhead__section align-items-center">
+        <h4>Campaign Custom Domain</h4>
+      </div>
+    </header>
+    <div class="container">
+      <div class="card">
+        <div class="card__content min-height-auto">
+          <p class="margin-bottom-x">
+            Any URL that you include in your SMS / WhatsApp campaigns gets
+            shortened to a smaller URL to reduce the number of characters in the
+            message. Eg. A URL such as
+            <span class="text-italic"
+              >https://www.westernstateinsurance.com/policy/documents/policyname.pdf</span
+            >
+            will get shortened to
+            <span class="text-italic">weurl.co/xyz</span> in the actual SMS /
+            WhatsApp message received by the customer. The domain of this
+            shortened URL is always <span class="text-italic">weurl.co</span> by
+            default. You can choose to change this domain from
+            <span class="text-italic">weurl.co</span> to a custom domain of your
+            choice for branding purposes. Eg. If your custom domain is
+            <span class="text-italic">wsins.com</span> then the shortened URL
+            will be <span class="text-italic">wsins.com/xyz</span> instead of
+            <span class="text-italic">weurl.co/xyz</span>.
+          </p>
+          <p class="margin-bottom-xxl">
+            To make this change, please point your custom domain's CNAME entry
+            to <span class="text-italic">weurl.co</span> and keep the TTL as 30
+            minutes. Once you've made this change, please enter your custom
+            domain below and save the settings.
+          </p>
+          <div class="row form__row">
+            <div class="col-2 form__lhs"><label>Custom Domain</label></div>
+            <div class="col-10">
+              <div class="form__element">
+                <input
+                  type="text"
+                  placeholder="www.google.com"
+                  class="field field--string undefined undefined"
+                  value="" />
+                <div class="personalisation--container"></div>
+                <span class="info-text"
+                  >Please exclude the http:// or https:// part</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer justify-content-end">
+            <button class="button button--disabled">Save</button>
+          </div>
+        </div>
+      </div>
+      <div class="last-child"></div>
+    </div>
+  </div>
+</div>

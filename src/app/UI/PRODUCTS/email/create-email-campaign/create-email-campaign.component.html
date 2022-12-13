@@ -1,0 +1,496 @@
+<div class="flex flex-col flex-auto min-w-0">
+  <div>
+      <header class="subhead">
+          <div class="subhead__section align-items-center">
+              <h4 class="camp-title-width handle-text-overflow" title="Campaign: undefined">
+                  Email Campaign : {{EmailCampaignDetailsById.title}}
+                  <div class="tooltip_wrapper tooltip--inline">
+                      <div class="tooltip_target tooltip--inline">
+                          <i class="fl-info fl-dark"></i>
+                      </div>
+                  </div>
+              </h4>
+          </div>
+      </header>
+  </div>
+  <mat-stepper #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup" (ngSubmit)="Submit()">
+              <ng-template matStepLabel>Audience</ng-template>
+              <div class="card">
+                  <div class="card__content overflow-visible padding-bottom-xxl min-height-auto">
+                      <div class="row">
+                          <div class="col-12">
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs">
+                                      <label>CAMPAIGN NAME</label>
+                                  </div>
+                                  <div class="col-9 noTruncate">
+                                      <div class="form__element">
+                                          <mat-form-field class="col-9">
+                                              <input matInput type="text" type="text" formControlName="licenseCode" placeholder="CAMPAIGN NAME" />
+                                          </mat-form-field>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-12 margin-top-xl margin-bottom-xl">
+                                      <div class="row form__row">
+                                          <div class="col-2 form__lhs">
+                                              <label>Campaign Tags</label>
+                                          </div>
+                                          <div class="col-9 noTruncate">
+                                              <div class="form__element react-select-wrapper-element">
+                                                  <div class="Select field--type-select tags-modal is-clearable is-searchable Select--multi">
+                                                      <mat-form-field appearance="fill" class="col-9">
+                                                          <mat-select [formControl]="toppings" multiple>
+                                                              <mat-option *ngFor="let topping of toppingLists" [value]="topping">{{topping}}</mat-option>
+                                                          </mat-select>
+                                                      </mat-form-field>
+                                                  </div>
+                                                  <span class="info-text">This field is optional. Tags help you analyze campaign results for a group of campaigns that belong to a tag.</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs">
+                                      <label>Campaign Type</label>
+                                  </div>
+                                  <div class="col-4 align-items-center">
+                                      <span class="align-items-center">
+                                          {{EmailCampaignDetailsById.container }}<span class="tooltip-top cursor-pointer" data-tooltip="Change Campaign Type"><i class="fl-edit fl-dark margin-left-x subhead__action subhead__action--with-border"></i></span>
+                                      </span>
+                                  </div>
+                              </div>
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs">
+                                      <label>Content Type</label>
+                                  </div>
+                                  <div class="col-9">
+                                      <div class="form__element undefined">
+                                          <label class="label" for="campaign-type"></label>
+                                          <div class="radio__group">
+                                              <mat-radio-group class="example-radio-group">
+                                                  <mat-radio-button value="PROMOTIONAL">Promotional (send only to subscribed users in Audience)</mat-radio-button>
+                                                  <mat-radio-button value="TRANSACTIONAL">Transactional (send to all users in Audience including those who have unsubscribed)</mat-radio-button>
+                                              </mat-radio-group>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs">
+                                      <label>AUDIENCE TYPE</label>
+                                  </div>
+                                  <div class="col-10">
+                                      <div class="form__element undefined">
+                                          <label class="label" for="audience-type"></label>
+                                          <div class="radio__group">
+                                              <mat-radio-group class="example-radio-group">
+                                                  <mat-radio-button value="single">Send to users in single segment</mat-radio-button>
+                                                  <mat-radio-button value="multiple">Send to users in multiple segments and/or Don't send to users in certain segments</mat-radio-button>
+                                              </mat-radio-group>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs"><label>Send To</label></div>
+                                  <div class="col-10">
+                                      <div class="row">
+                                          <div class="col-8">
+                                              <div class="row margin-bottom-10">
+                                                  <div class="col-12 row">
+                                                      <div class="col-9">
+                                                          <div class="form__element react-select-wrapper-element">
+                                                              <mat-form-field class="col-12" appearance="fill">
+                                                                  <input type="text" placeholder="Select" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" />
+                                                                  <mat-autocomplete #auto="matAutocomplete">
+                                                                      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                                                          {{option}}
+                                                                      </mat-option>
+                                                                  </mat-autocomplete>
+                                                              </mat-form-field>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <button mat-button matStepperNext>next</button>
+              </div>
+          </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>When</ng-template>
+              <div class="card">
+                  <div class="card__header">
+                      <div class="row align-items-center">
+                          <div class="col flex-1">
+                              <h5>Campaign Type &amp; Schedule</h5>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card__content overflow-visible padding-bottom-xxl min-height-auto">
+                      <div class="row">
+                          <div class="col-12">
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs">
+                                      <label>
+                                          CAMPAIGN TYPE
+                                          <div class="tooltip_wrapper tooltip--inline">
+                                              <div class="tooltip_target tooltip--inline">
+                                                  <i class="fl-info fl-dark"></i>
+                                              </div>
+                                          </div>
+                                      </label>
+                                  </div>
+                                  <div class="col-10">
+                                      <div class="form__element">
+                                          <label class="label" for="campaignType"></label>
+                                          <div class="radio__group">
+                                              <mat-radio-group class="example-radio-group">
+                                                  <mat-radio-button value="One-time">One-time</mat-radio-button>
+                                                  <mat-radio-button value="Triggered">Triggered</mat-radio-button>
+                                                  <mat-radio-button value="Recurring">Recurring</mat-radio-button>
+                                              </mat-radio-group>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs">
+                                      <label>DELIVERY SCHEDULE</label>
+                                  </div>
+                                  <div class="col-10">
+                                      <div class="form__element undefined">
+                                          <label class="label" for="sendScheduleType"></label>
+                                          <div class="radio__group">
+                                              <mat-radio-group class="example-radio-group">
+                                                  <mat-radio-button value="Now">Now</mat-radio-button>
+                                                  <mat-radio-button value="Later">Later</mat-radio-button>
+                                              </mat-radio-group>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card__header">
+                      <div class="row align-items-center">
+                          <div class="col flex-1">
+                              <h5>Frequency Capping, DND, Queuing &amp; Throttling</h5>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card__content overflow-visible padding-bottom-xxl min-height-auto">
+                      <div class="row">
+                          <div class="col-12">
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs">
+                                      <div class="tooltip_wrapper tooltip--inline">
+                                          <div class="tooltip_target tooltip--inline">
+                                              <span><label>FC</label><i class="fl-info fl-dark"></i></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-10">
+                                      <div class="radio__group">
+                                          <mat-radio-group class="example-radio-group">
+                                              <mat-radio-button value="Yes">Follow Frequency Capping settings. Do not send messages to a user if limit for that day/week/month is reached for that user</mat-radio-button>
+                                              <mat-radio-button value="No">Ignore Frequency Capping settings. Send messages to a user even if limit for that day/week/month is reached for that user</mat-radio-button>
+                                          </mat-radio-group>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs">
+                                      <div class="tooltip_wrapper tooltip--inline">
+                                          <div class="tooltip_target tooltip--inline">
+                                              <span><label>DND</label><i class="fl-info fl-dark"></i></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-10">
+                                      <div class="form__element undefined">
+                                          <label class="label" for="DND"></label>
+                                          <div class="radio__group">
+                                              <mat-radio-group class="example-radio-group">
+                                                  <mat-radio-button value="Now">Follow DND settings. Do not send messages during DND hours</mat-radio-button>
+                                                  <mat-radio-button value="Later">Ignore DND settings. Send messages during DND hours</mat-radio-button>
+                                              </mat-radio-group>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="row form__row">
+                                  <div class="col-2 form__lhs">
+                                      <span>
+                                          <label>Throttling</label>
+                                          <span class="tooltip-right data-tooltip--size-large" data-tooltip="Throttling helps control the number of messages sent out per minute"> <i class="fl-info fl-dark"></i></span>
+                                      </span>
+                                  </div>
+                                  <div class="col-10 padding-left-xl margin-top-xs">
+                                      <div class="row align-items-center">
+                                          <div class="form__element undefined">
+                                              <label class="label" for="throttling"></label>
+                                              <div class="col-10">
+                                                  <div class="form__element undefined">
+                                                      <label class="label" for="DND"></label>
+                                                      <div class="radio__group">
+                                                          <mat-radio-group class="example-radio-group">
+                                                              <mat-radio-button value="No">Do not throttle campaigns. Send all messages immediately</mat-radio-button>
+                                                              <mat-radio-button value="Yes">Throttle campaigns as per channel throttling limits</mat-radio-button>
+                                                          </mat-radio-group>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+              </div>
+          </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+          <form>
+              <ng-template matStepLabel>Message</ng-template>
+              <div class="container">
+                  <div>
+                      <div class="no-padding">
+                          <div class="card">
+                              <div class="card__header">
+                                  <div class="row align-items-center">
+                                      <div class="col flex-1">
+                                          <h5>Email Service Provider</h5>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card__content overflow-visible padding-bottom-xxl min-height-auto">
+                                  <div class="row">
+                                      <div class="col">
+                                          <div class="row form__row">
+                                              <div class="col-2 form__lhs"><label>ESP</label></div>
+                                              <div class="col-10">
+                                                  <mat-form-field class="col-6" appearance="fill">
+                                                      <input type="text" placeholder="Select" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" />
+                                                      <mat-autocomplete #auto="matAutocomplete">
+                                                          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                                              {{option}}
+                                                          </mat-option>
+                                                      </mat-autocomplete>
+                                                  </mat-form-field>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="card">
+                              <div class="card__header">
+                                  <div class="row align-items-center">
+                                      <div class="col flex-1">
+                                          <h5>From</h5>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card__content overflow-visible padding-bottom-xxl min-height-auto">
+                                  <div class="row">
+                                      <div class="col">
+                                          <div class="row form__row">
+                                              <div class="col-2 form__lhs"><label>From name</label></div>
+                                              <div class="col-9 noTruncate">
+                                                  <div class="form__element">
+                                                      <mat-form-field class="col-6">
+                                                          <input matInput type="text" type="text" formControlName="licenseCode" placeholder="Ex. goutam.k@capengage.com" />
+                                                      </mat-form-field>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row form__row">
+                                              <div class="col-2 form__lhs"><label>From email</label></div>
+                                              <div class="col-9 noTruncate">
+                                                  <div class="form__element">
+                                                      <mat-form-field class="col-6">
+                                                          <input matInput type="text" type="text" formControlName="licenseCode" placeholder="Ex. goutam.k@capengage.com" />
+                                                      </mat-form-field>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="card">
+                              <div class="card__header">
+                                  <div class="row align-items-center">
+                                      <div class="col flex-1">
+                                          <h5>Message</h5>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card__content overflow-visible padding-bottom-xxl min-height-auto">
+                                  <div class="row">
+                                      <div class="col">
+                                          <div class="row form__row">
+                                              <div class="col-2 form__lhs"><label>Subject</label></div>
+                                              <div class="col-9 noTruncate">
+                                                  <div class="form__element">
+                                                      <mat-form-field class="col-6">
+                                                          <input matInput type="text" type="text" formControlName="licenseCode" placeholder="Ex. goutam.k@capengage.com" />
+                                                      </mat-form-field>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row form__row">
+                                              <div class="col-2 form__lhs"><label>Body</label></div>
+                                              <div class="col-9 noTruncate">
+                                                  <div>
+                                                      <div class="form__element">
+                                                          <mat-form-field class="col-10" style="height:500px" appearance="fill">
+                                                              <textarea matInput></textarea>
+                                                          </mat-form-field>
+                                                          <div class="personalisation--container"></div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="card">
+                              <div class="card__header">
+                                  <div class="row align-items-center">
+                                      <div class="col flex-1">
+                                          <h5>Attachments</h5>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card__content overflow-visible min-height-auto">
+                                  <div class="col">
+                                      <div class="row form__row">
+                                          <div class="col-2 form__lhs"><label>Attachment 1</label></div>
+                                          <div class="col-10">
+                                              <div class="file-uploader undefined empty">
+                                                  <div class="row">
+                                                      <div class="col-12">
+                                                          <div class="row align-items-center">
+                                                              <div class="col-8">
+                                                                  <div class="form__element">
+                                                                      <input type="text" placeholder="https://www.abc.com/document.pdf" class="field field--string undefined undefined" value="" />
+                                                                      <div class="personalisation--container">
+                                                                          <div id="email-p" class="personalisation" tabindex="0"><i class="fl-dark fl-user cursor-pointer"></i></div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                              <span class="">or</span>
+                                                              <div class="col-2">
+                                                                  <label class="no-margin-right button button--secondary noselect disable-in-sent-mode button--xs file-uploader__action undefined">
+                                                                      Upload<input accept=".pdf, .csv, .doc, .docx, .xls, .csv, .txt, .jpg, .png, .jpeg, .gif" type="file" style="display: none;" />
+                                                                  </label>
+                                                              </div>
+                                                          </div>
+                                                          <p aria-hidden="false" class="file-uploader__message"><span class="info-text">Maximum file size: 10 MB</span></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row form__row">
+                                          <div class="col-2 form__lhs"></div>
+                                          <div class="col-10"><button class="button button--secondary">Add Another Attachment</button></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="last-child"></div>
+                  <div class="footer justify-content-end">
+                      <button class="button button--tertiary margin-right-x">BACK</button>
+                      <div class="margin-left-auto">
+                          <span class="tooltip-top data-tooltip--size-large padding-top-x" data-tooltip="Test message cannot be sent as you have not filled the required information in all the mandatory fields on this page.">
+                              <button class="button button--tertiary margin-right-x button--disabled">Test Campaign</button>
+                          </span>
+                          <span><button class="button button--secondary button--secondary--disabled" disabled="">SAVE &amp; CONTINUE</button></span>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+              </div>
+          </form>
+      </mat-step>
+      <!--    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Conversion Tracking</ng-template>
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required />
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Test Campaign</ng-template>
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required />
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Preview & Launch</ng-template>
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required />
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step> -->
+      <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <p>You are now done.</p>
+          {{firstFormGroup.value | json}}
+          <div>
+              <button mat-button matStepperNext (click)="Submit">Submit</button>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+      </mat-step>
+  </mat-stepper>
+</div>

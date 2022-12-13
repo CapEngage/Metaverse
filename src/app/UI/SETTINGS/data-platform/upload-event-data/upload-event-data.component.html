@@ -1,0 +1,172 @@
+<div class="flex flex-col flex-auto min-w-0">
+  <div>
+    <header class="subhead">
+      <div class="subhead__section align-items-center">
+        <h4 class="float-left">Data Management</h4>
+      </div>
+      <ul class="tab-list clearfix">
+        <li class="tab-list__element">
+          <a
+            class="tab-list__link"
+            href="/accounts/~7167dbc0/data-management/system/attributes"
+            >System Attributes</a
+          >
+        </li>
+        <li class="tab-list__element">
+          <a
+            class="tab-list__link"
+            href="/accounts/~7167dbc0/data-management/users/attributes"
+            >User Profile Attributes</a
+          >
+        </li>
+        <li class="tab-list__element">
+          <a
+            class="tab-list__link"
+            href="/accounts/~7167dbc0/data-management/events/attributes"
+            >Custom Events</a
+          >
+        </li>
+        <li class="tab-list__element">
+          <a
+            class="tab-list__link"
+            href="/accounts/~7167dbc0/data-management/business-events/"
+            >Business Events</a
+          >
+        </li>
+        <li class="tab-list__element">
+          <a
+            class="tab-list__link"
+            href="/accounts/~7167dbc0/data-management/users/upload"
+            >Upload User Data</a
+          >
+        </li>
+        <li class="tab-list__element">
+          <a
+            class="tab-list__link tab-list__link--active"
+            aria-current="page"
+            href="/accounts/~7167dbc0/data-management/events/upload"
+            >Upload Events Data</a
+          >
+        </li>
+        <li class="tab-list__element">
+          <a
+            class="tab-list__link"
+            href="/accounts/~7167dbc0/data-management/events/revenue"
+            >Revenue Mapping</a
+          >
+        </li>
+      </ul>
+    </header>
+    <div class="container">
+      <div>
+        <div class="card">
+          <div class="card__header">
+            <div class="display-flex align-items-center">
+              <h5>Upload Event Data</h5>
+              <label class="margin-left-auto"
+                ><a
+                  class="no-decoration text-primary"
+                  href="https://knowledgebase.webengage.com/docs/csv-uploads"
+                  target="_blank"
+                  >View Documentation</a
+                ></label
+              >
+            </div>
+          </div>
+          <div class="card__content min-height-auto">
+            <div class="row">
+              <div class="col col-5">
+                <span class="display-block"
+                  ><span
+                    >Please ensure that <i>event_name</i>, <i>user_id</i> and
+                    <i>event_time</i> are the first three data points on each
+                    row.</span
+                  ><span>
+                    Download our
+                    <a
+                      class="no-decoration text-primary"
+                      href="javascript:void"
+                      >sample CSV</a
+                    >
+                    file to see the format required.</span
+                  ><span>
+                    You may also read
+                    <a
+                      class="no-decoration text-primary"
+                      href="https://knowledgebase.webengage.com/docs/csv-uploads"
+                      target="_blank"
+                      >our documentation</a
+                    >
+                    for more details on CSV uploads.</span
+                  ></span
+                >
+                <form [formGroup]="eventUploadForm" encType="multipart/form-data" (ngSubmit)="onSubmit()">
+                <input
+                  type="file"
+                  id="input-file"
+                  accept=".csv" formControlName="EventCsvFile"   
+                  class="display-none" /><span
+                  ><label
+                    for="input-file"
+                    class="clearfix button button--secondary margin-top-xxl"
+                    >SELECT FILE</label
+                  ></span
+                >
+                <p
+                  aria-hidden="false"
+                  class="file-uploader__message">
+                  <span class="display-inline-block info-text"
+                    >Maximum file size: 200MB</span
+                  >
+                </p>
+                <button class="btn btn-success btn-lg btn-block" type="submit">
+                  Upload Event
+                </button>
+              </form>
+              </div>
+              <div class="col col-7">
+                <img
+                  src="//d107ygk0jso0v4.cloudfront.net/frontline/images/events-csv-2c16110517656c936e747d5542fb4dd6.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card__header">
+              <h5 class="">
+                <div class="row">
+                  <div class="col col-7">
+                    <span
+                      >History
+                      <button
+                        class="button button--icon margin-left-x button--icon--secondary">
+                        <i class="fl-sync fl-light"></i></button
+                    ></span>
+                  </div>
+                  <div class="col col-3 margin-left-auto">
+                    <div class="search">
+                      <i class="fl-search"></i>
+                      <div class="form__element">
+                        <input
+                          type="text"
+                          placeholder="Search for a report"
+                          class="field field--string undefined undefined"
+                          value="" />
+                        <div class="personalisation--container"></div>
+                      </div>
+                      <i class="fl-close cursor-pointer display-none"></i>
+                    </div>
+                  </div>
+                </div>
+              </h5>
+            </div>
+            <div class="card__content no-padding card__content--is-empty">
+              <h5 class="text-center">You haven’t uploaded any files yet</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

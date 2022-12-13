@@ -1,0 +1,757 @@
+<div class="flex flex-col flex-auto min-w-0">
+    <div>
+        <header class="subhead">
+            <div class="subhead__section align-items-center">
+                <div class="display-flex w-50 align-items-center">
+                    <h4 class="display-inline-block">
+                        Email
+                        <div class="tooltip_wrapper tooltip--inline">
+                            <div class="tooltip_target tooltip--inline"><i class="fl-info fl-dark"></i></div>
+                        </div>
+                    </h4>
+                    <span class="text-primary no-decoration visibility-hidden"><i class="fl-add-circle subhead__action"></i></span>
+                </div>
+                <div class="margin-left-auto">
+                    <div class="pop-over smart-date">
+                        <div class="pop-over__head">
+                            <div><span>Last 7 days</span><i class="fl-chevron-bottom fl-dark"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <span data-tooltip="Download Report" class="tooltip-left data-tooltip--size-auto margin-left-xs padding-left-xs padding-right-xs border-left no-decoration cursor-pointer text-gray-medium display-block">
+                    <i class="fl-download subhead__action subhead__action--with-border no-border f21"></i>
+                </span>
+                <div class="text-left border-left">
+                    <span data-tooltip="Schedule Report" class="no-decoration cursor-pointer text-gray-medium cursor-pointer tooltip-left data-tooltip--size-auto display-block">
+                        <i class="fl-report subhead__action subhead__action--with-border no-border text-gray-medium"></i>
+                    </span>
+                </div>
+            </div>
+            <ul class="tab-list clearfix">
+                <li class="tab-list__element"><a class="tab-list__link tab-list__link--active" aria-current="page" routerLink="">Overview</a></li>
+                <li class="tab-list__element"><a class="tab-list__link" routerLink="../campaign-list">List of Campaigns</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col display-flex">
+                    <div class="card card--stats">
+                        <div class="display-flex flex-direction-column w-100">
+                            <div class="card__title flex-1">
+                                <div>
+                                    <label class="card__title__label">
+                                        <span>
+                                            REACHABILITY
+                                            <div class="tooltip_wrapper tooltip--inline">
+                                                <div class="tooltip_target tooltip--inline"><i class="fl-info fl-dark"></i></div>
+                                            </div>
+                                        </span>
+                                    </label>
+                                </div>
+                                <h5 class="card__title__count">0</h5>
+                                <p class="card__title__secondary-count text--intermediate values">0%</p>
+                            </div>
+                            <div class="card__subtitles"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col display-flex">
+                    <div class="card card--stats">
+                        <div class="display-flex flex-direction-column w-100">
+                            <div class="card__title flex-1">
+                                <div>
+                                    <label class="card__title__label">
+                                        NEW SUBSCRIBERS
+                                        <div class="tooltip_wrapper tooltip--inline">
+                                            <div class="tooltip_target tooltip--inline"><i class="fl-info fl-dark"></i></div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <h5 class="card__title__count">0</h5>
+                            </div>
+                            <div class="card__subtitles"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col display-flex">
+                    <div class="card card--stats">
+                        <div class="display-flex flex-direction-column w-100">
+                            <div class="card__title flex-1">
+                                <div>
+                                    <label class="card__title__label">
+                                        <span>
+                                            UNSUBSCRIBES
+                                            <div class="tooltip_wrapper tooltip--inline">
+                                                <div class="tooltip_target tooltip--inline"><i class="fl-info fl-dark"></i></div>
+                                            </div>
+                                        </span>
+                                    </label>
+                                </div>
+                                <h5 class="card__title__count">0</h5>
+                            </div>
+                            <div class="card__subtitles"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col display-flex">
+                    <div class="card card--stats">
+                        <div class="display-flex flex-direction-column w-100">
+                            <div class="card__title flex-1">
+                                <div>
+                                    <label class="card__title__label">
+                                        USERS ENGAGED
+                                        <div class="tooltip_wrapper tooltip--inline">
+                                            <div class="tooltip_target tooltip--inline"><i class="fl-info fl-dark"></i></div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <h5 class="card__title__count">0</h5>
+                            </div>
+                            <div class="card__subtitles"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col display-flex">
+                    <div class="card card--stats">
+                        <div class="display-flex flex-direction-column w-100">
+                            <div class="card__title flex-1">
+                                <div>
+                                    <label class="card__title__label">
+                                        REVENUE
+                                        <div class="tooltip_wrapper tooltip--inline">
+                                            <div class="tooltip_target tooltip--inline"><i class="fl-info fl-dark"></i></div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <h5 class="card__title__count">0</h5>
+                            </div>
+                            <div class="card__subtitles"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__content card__content--info-box">
+                    <div class="text-center">
+                        <div><h5 class="margin-bottom-xxl">Start tagging your campaigns &amp; journeys to see valuable insights here (as shown in the sample image below)</h5></div>
+                        <div><img src="//d1rind1mbgys5l.cloudfront.net/frontline/images/tags-sample-1373dac3f857e3c0b63f07b14b055e24.png" alt="" style="max-width: 900px; width: 100%;" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__header no-padding">
+                    <div class="align-items-center">
+                        <div class="flex-1">
+                            <div class="row align-items-center">
+                                <div class="col-0">
+                                    <div class="display-flex flex-direction-row justify-content-start align-items-center padding-bottom-m padding-left-xxl padding-top-m">
+                                        <div class="flex-direction-row display-flex align-items-center">
+                                            <div class="margin-right-xl">
+                                                <span>
+                                                    <div class="pop-over">
+                                                        <div class="pop-over__head"><span class=" ">Type</span><i class="fl-chevron-bottom fl-dark"></i></div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                            <div class="margin-right-xl">
+                                                <span>
+                                                    <div class="pop-over">
+                                                        <div class="pop-over__head"><span class=" ">Tags</span><i class="fl-chevron-bottom fl-dark"></i></div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="padding-top-m padding-bottom-m">
+                                        <div class="form__element form__element--flex react-select-wrapper-element">
+                                            <label class="label label--flex undefined" for="react-select-wrapper">Split By:</label>
+                                            <div class="Select field--type-select undefined has-value Select--single">
+                                                <input name="react-select-wrapper" type="hidden" value="CAMPAIGN_CHANNEL" />
+                                                <div class="Select-control">
+                                                    <div class="Select-multi-value-wrapper" id="react-select-5--value">
+                                                        <div class="Select-value"><span class="Select-value-label" role="option" aria-selected="true" id="react-select-5--value-item">Channels</span></div>
+                                                        <div
+                                                            aria-expanded="false"
+                                                            aria-owns=""
+                                                            aria-activedescendant="react-select-5--value"
+                                                            aria-disabled="false"
+                                                            class="Select-input"
+                                                            role="combobox"
+                                                            tabindex="0"
+                                                            style="border: 0px; width: 1px; display: inline-block;"
+                                                        ></div>
+                                                    </div>
+                                                    <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col flex-0">
+                            <div class="pop-over">
+                                <div class="pop-over__head"><i class="fl-vert-more fl-dark"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__content no-padding table-overflow-visible card__content--is-empty"><h5 class="text-center">No data available</h5></div>
+            </div>
+            <div class="card">
+                <div class="card__content min-height-auto">
+                    <div class="row">
+                        <div class="col">
+                            <div id="bar-chart-failures" class="we-chart" data-highcharts-chart="3">
+                                <div
+                                    id="highcharts-ryfue9z-17"
+                                    dir="ltr"
+                                    class="highcharts-container"
+                                    style="
+                                        position: relative;
+                                        overflow: hidden;
+                                        width: 504px;
+                                        height: 400px;
+                                        text-align: left;
+                                        line-height: normal;
+                                        z-index: 0;
+                                        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                            'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                    "
+                                >
+                                    <svg
+                                        version="1.1"
+                                        class="highcharts-root"
+                                        style="
+                                            font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen',
+                                                'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                            font-size: 12px;
+                                        "
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="504"
+                                        height="400"
+                                        viewBox="0 0 504 400"
+                                    >
+                                        <desc>Created with Highcharts 6.2.0</desc>
+                                        <defs>
+                                            <clipPath id="highcharts-ryfue9z-18"><rect x="0" y="0" width="418" height="222" fill="none"></rect></clipPath>
+                                        </defs>
+                                        <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="504" height="400" rx="0" ry="0"></rect>
+                                        <rect fill="none" class="highcharts-plot-background" x="76" y="57" width="418" height="222"></rect>
+                                        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1"><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 284.5 57 L 284.5 279" opacity="1"></path></g>
+                                        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 279.5 L 494 279.5" opacity="1"></path>
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 205.5 L 494 205.5" opacity="1"></path>
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 131.5 L 494 131.5" opacity="1"></path>
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 56.5 L 494 56.5" opacity="1"></path>
+                                        </g>
+                                        <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="76" y="57" width="418" height="222"></rect>
+                                        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 284.5 279 L 284.5 289" opacity="1"></path>
+                                            <text x="285" data-z-index="7" text-anchor="middle" transform="translate(0,0)" class="highcharts-axis-title" style="color: #6e707a; font-size: 12px; fill: #6e707a;" y="381"><tspan>Days</tspan></text>
+                                            <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 76 279.5 L 494 279.5"></path>
+                                        </g>
+                                        <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+                                            <text x="26" data-z-index="7" text-anchor="middle" transform="translate(0,0) rotate(270 26 168)" class="highcharts-axis-title" style="color: #6e707a; font-size: 12px; fill: #6e707a;" y="168">
+                                                <tspan>Delivery Failures</tspan>
+                                            </text>
+                                            <path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 76 57 L 76 279"></path>
+                                        </g>
+                                        <g class="highcharts-series-group" data-z-index="3">
+                                            <g
+                                                data-z-index="0.1"
+                                                class="highcharts-series highcharts-series-0 highcharts-column-series highcharts-color-0 highcharts-tracker"
+                                                transform="translate(76,57) scale(1 1)"
+                                                clip-path="url(#highcharts-ryfue9z-18)"
+                                            >
+                                                <rect x="193.5" y="222.5" width="30" height="0" fill="#FE5E5F" stroke="#FE5E5F" stroke-width="1" class="highcharts-point highcharts-color-0"></rect>
+                                            </g>
+                                            <g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-column-series highcharts-color-0" transform="translate(76,57) scale(1 1)" clip-path="none"></g>
+                                        </g>
+                                        <g class="highcharts-exporting-group" data-z-index="3"></g>
+                                        <text x="10" text-anchor="start" class="highcharts-title" data-z-index="4" style="color: #6e707a; font-size: 13px; font-weight: 600; fill: #6e707a;" y="20"><tspan>Delivery Failures</tspan></text>
+                                        <text x="252" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: #666666; fill: #666666;" y="41"></text>
+                                        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"></g>
+                                        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="283" opacity="1">0</text>
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="209" opacity="1">20</text>
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="135" opacity="1">40</text>
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="61" opacity="1">60</text>
+                                        </g>
+                                    </svg>
+                                    <div class="highcharts-axis-labels highcharts-xaxis-labels" style="position: absolute; left: 0px; top: 0px; opacity: 1;">
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 197.593px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">3 Oct</div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div id="bar-chart-from-first" class="we-chart" data-highcharts-chart="4">
+                                <div
+                                    id="highcharts-ryfue9z-20"
+                                    dir="ltr"
+                                    class="highcharts-container"
+                                    style="
+                                        position: relative;
+                                        overflow: hidden;
+                                        width: 504px;
+                                        height: 400px;
+                                        text-align: left;
+                                        line-height: normal;
+                                        z-index: 0;
+                                        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                            'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                    "
+                                >
+                                    <svg
+                                        version="1.1"
+                                        class="highcharts-root"
+                                        style="
+                                            font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen',
+                                                'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                            font-size: 12px;
+                                        "
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="504"
+                                        height="400"
+                                        viewBox="0 0 504 400"
+                                    >
+                                        <desc>Created with Highcharts 6.2.0</desc>
+                                        <defs>
+                                            <clipPath id="highcharts-ryfue9z-21"><rect x="0" y="0" width="418" height="222" fill="none"></rect></clipPath>
+                                        </defs>
+                                        <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="504" height="400" rx="0" ry="0"></rect>
+                                        <rect fill="none" class="highcharts-plot-background" x="76" y="57" width="418" height="222"></rect>
+                                        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 117.5 57 L 117.5 279" opacity="1"></path>
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 200.5 57 L 200.5 279" opacity="1"></path>
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 284.5 57 L 284.5 279" opacity="1"></path>
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 368.5 57 L 368.5 279" opacity="1"></path>
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 451.5 57 L 451.5 279" opacity="1"></path>
+                                        </g>
+                                        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 279.5 L 494 279.5" opacity="1"></path>
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 205.5 L 494 205.5" opacity="1"></path>
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 131.5 L 494 131.5" opacity="1"></path>
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 56.5 L 494 56.5" opacity="1"></path>
+                                        </g>
+                                        <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="76" y="57" width="418" height="222"></rect>
+                                        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 117.5 279 L 117.5 289" opacity="1"></path>
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 200.5 279 L 200.5 289" opacity="1"></path>
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 284.5 279 L 284.5 289" opacity="1"></path>
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 368.5 279 L 368.5 289" opacity="1"></path>
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 451.5 279 L 451.5 289" opacity="1"></path>
+                                            <text x="285" data-z-index="7" text-anchor="middle" transform="translate(0,0)" class="highcharts-axis-title" style="color: #6e707a; font-size: 12px; fill: #6e707a;" y="381">
+                                                <tspan>Number of Emails</tspan>
+                                            </text>
+                                            <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 76 279.5 L 494 279.5"></path>
+                                        </g>
+                                        <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+                                            <text x="26" data-z-index="7" text-anchor="middle" transform="translate(0,0) rotate(270 26 168)" class="highcharts-axis-title" style="color: #6e707a; font-size: 12px; fill: #6e707a;" y="168">
+                                                <tspan>Users who Unsubscribed</tspan>
+                                            </text>
+                                            <path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 76 57 L 76 279"></path>
+                                        </g>
+                                        <g class="highcharts-series-group" data-z-index="3">
+                                            <g
+                                                data-z-index="0.1"
+                                                class="highcharts-series highcharts-series-0 highcharts-column-series highcharts-color-0 highcharts-tracker"
+                                                transform="translate(76,57) scale(1 1)"
+                                                clip-path="url(#highcharts-ryfue9z-21)"
+                                            >
+                                                <rect x="0" y="223" width="84" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                                <rect x="84" y="223" width="83" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                                <rect x="167" y="223" width="84" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                                <rect x="251" y="223" width="83" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                                <rect x="334" y="223" width="84" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                            </g>
+                                            <g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-column-series highcharts-color-0" transform="translate(76,57) scale(1 1)" clip-path="none"></g>
+                                        </g>
+                                        <g class="highcharts-exporting-group" data-z-index="3"></g>
+                                        <text x="10" text-anchor="start" class="highcharts-title" data-z-index="4" style="color: #6e707a; font-size: 13px; font-weight: 600; fill: #6e707a;" y="20">
+                                            <tspan>Number of Emails before Unsubscribe</tspan>
+                                        </text>
+                                        <text x="252" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: #666666; fill: #666666;" y="41"></text>
+                                        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"></g>
+                                        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="283" opacity="1">0</text>
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="209" opacity="1">20</text>
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="135" opacity="1">40</text>
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="61" opacity="1">60</text>
+                                        </g>
+                                    </svg>
+                                    <div class="highcharts-axis-labels highcharts-xaxis-labels" style="position: absolute; left: 0px; top: 0px; opacity: 1;">
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 30.3927px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">0 - 10</div>
+                                        </span>
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 113.993px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">20 - 30</div>
+                                        </span>
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 197.593px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">30 - 40</div>
+                                        </span>
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 281.193px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">40 - 50</div>
+                                        </span>
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 364.793px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">50 - 60</div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div id="bar-chart-before-unsubscribe" class="we-chart" data-highcharts-chart="5">
+                                <div
+                                    id="highcharts-ryfue9z-27"
+                                    dir="ltr"
+                                    class="highcharts-container"
+                                    style="
+                                        position: relative;
+                                        overflow: hidden;
+                                        width: 504px;
+                                        height: 400px;
+                                        text-align: left;
+                                        line-height: normal;
+                                        z-index: 0;
+                                        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                            'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                    "
+                                >
+                                    <svg
+                                        version="1.1"
+                                        class="highcharts-root"
+                                        style="
+                                            font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen',
+                                                'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                            font-size: 12px;
+                                        "
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="504"
+                                        height="400"
+                                        viewBox="0 0 504 400"
+                                    >
+                                        <desc>Created with Highcharts 6.2.0</desc>
+                                        <defs>
+                                            <clipPath id="highcharts-ryfue9z-28"><rect x="0" y="0" width="418" height="222" fill="none"></rect></clipPath>
+                                        </defs>
+                                        <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="504" height="400" rx="0" ry="0"></rect>
+                                        <rect fill="none" class="highcharts-plot-background" x="76" y="57" width="418" height="222"></rect>
+                                        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 117.5 57 L 117.5 279" opacity="1"></path>
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 200.5 57 L 200.5 279" opacity="1"></path>
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 284.5 57 L 284.5 279" opacity="1"></path>
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 368.5 57 L 368.5 279" opacity="1"></path>
+                                            <path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 451.5 57 L 451.5 279" opacity="1"></path>
+                                        </g>
+                                        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 279.5 L 494 279.5" opacity="1"></path>
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 205.5 L 494 205.5" opacity="1"></path>
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 131.5 L 494 131.5" opacity="1"></path>
+                                            <path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 76 56.5 L 494 56.5" opacity="1"></path>
+                                        </g>
+                                        <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="76" y="57" width="418" height="222"></rect>
+                                        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 117.5 279 L 117.5 289" opacity="1"></path>
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 200.5 279 L 200.5 289" opacity="1"></path>
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 284.5 279 L 284.5 289" opacity="1"></path>
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 368.5 279 L 368.5 289" opacity="1"></path>
+                                            <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 451.5 279 L 451.5 289" opacity="1"></path>
+                                            <text x="285" data-z-index="7" text-anchor="middle" transform="translate(0,0)" class="highcharts-axis-title" style="color: #6e707a; font-size: 12px; fill: #6e707a;" y="381">
+                                                <tspan>Total Days from First Email</tspan>
+                                            </text>
+                                            <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 76 279.5 L 494 279.5"></path>
+                                        </g>
+                                        <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+                                            <text x="26" data-z-index="7" text-anchor="middle" transform="translate(0,0) rotate(270 26 168)" class="highcharts-axis-title" style="color: #6e707a; font-size: 12px; fill: #6e707a;" y="168">
+                                                <tspan>Users who Unsubscribed</tspan>
+                                            </text>
+                                            <path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 76 57 L 76 279"></path>
+                                        </g>
+                                        <g class="highcharts-series-group" data-z-index="3">
+                                            <g
+                                                data-z-index="0.1"
+                                                class="highcharts-series highcharts-series-0 highcharts-column-series highcharts-color-0 highcharts-tracker"
+                                                transform="translate(76,57) scale(1 1)"
+                                                clip-path="url(#highcharts-ryfue9z-28)"
+                                            >
+                                                <rect x="0" y="223" width="84" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                                <rect x="84" y="223" width="83" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                                <rect x="167" y="223" width="84" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                                <rect x="251" y="223" width="83" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                                <rect x="334" y="223" width="84" height="0" fill="#FD578D" class="highcharts-point highcharts-color-0"></rect>
+                                            </g>
+                                            <g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-column-series highcharts-color-0" transform="translate(76,57) scale(1 1)" clip-path="none"></g>
+                                        </g>
+                                        <g class="highcharts-exporting-group" data-z-index="3"></g>
+                                        <text x="10" text-anchor="start" class="highcharts-title" data-z-index="4" style="color: #6e707a; font-size: 13px; font-weight: 600; fill: #6e707a;" y="20">
+                                            <tspan>Days from first Email to Unsubscribe</tspan>
+                                        </text>
+                                        <text x="252" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: #666666; fill: #666666;" y="41"></text>
+                                        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"></g>
+                                        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="283" opacity="1">0</text>
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="209" opacity="1">20</text>
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="135" opacity="1">40</text>
+                                            <text x="61" style="color: #666666; cursor: default; font-size: 11px; fill: #666666;" text-anchor="end" transform="translate(0,0)" y="61" opacity="1">60</text>
+                                        </g>
+                                    </svg>
+                                    <div class="highcharts-axis-labels highcharts-xaxis-labels" style="position: absolute; left: 0px; top: 0px; opacity: 1;">
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 30.3927px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">0 - 10</div>
+                                        </span>
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 113.993px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">20 - 30</div>
+                                        </span>
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 197.593px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">30 - 40</div>
+                                        </span>
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 281.193px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">40 - 50</div>
+                                        </span>
+                                        <span
+                                            opacity="1"
+                                            style="
+                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                                    'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                font-size: 11px;
+                                                position: absolute;
+                                                white-space: nowrap;
+                                                color: rgb(102, 102, 102);
+                                                cursor: default;
+                                                margin-left: 0px;
+                                                margin-top: 0px;
+                                                left: 364.793px;
+                                                top: 284px;
+                                                transform: rotate(-45deg);
+                                                transform-origin: 100% 11px;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                opacity: 1;
+                                            "
+                                        >
+                                            <div align="center" style="word-wrap: break-word; word-break: break-all; width: 90px;">50 - 60</div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__header"><h5 class="">Engagement Trends</h5></div>
+                <div class="card__content card__content--is-empty"><h5 class="text-center">No data available</h5></div>
+            </div>
+        </div>
+    </div>
+    
+</div>

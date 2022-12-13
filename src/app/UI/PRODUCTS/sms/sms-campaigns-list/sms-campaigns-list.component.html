@@ -1,0 +1,139 @@
+<div class="flex flex-col flex-auto min-w-0">
+  <div>
+    <header class="subhead">
+      <div class="subhead__section align-items-center">
+        <div class="display-flex flex-direction-row w-50 align-items-center">
+          <h4>SMS :  Campaigns {{brandCode}}</h4>
+          <div class="tooltip_wrapper tooltip--inline">
+            <div class="tooltip_target tooltip--inline">
+              <i class="fl-info fl-dark"></i>
+            </div>
+          </div>
+          <a
+            title="Create a segment"
+            class="text-primary no-decoration-"
+            routerLink="../create"
+            ><i class="fl-add-circle subhead__action"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="card">
+        <div class="card__header">
+          <div class="row align-items-center">
+            <div class="col col-4">
+              <span class=""
+                ><div
+                  class="display-flex flex-direction-row align-items-center padding-left-x"
+                >
+                  <div
+                    class="flex-direction-row display-flex align-items-center"
+                  >
+                    <div class="margin-right-xl">
+                      <span
+                        ><div class="pop-over">
+                          <div class="pop-over__head">
+                            <span class="">SMS Campaigns List</span> 
+                          </div></div
+                      ></span>
+                    </div>
+                  </div></div
+              ></span>
+            </div>
+            <div class="col col-3 margin-left-auto">
+              <div class="search">
+                <i class="fl-search"></i>
+                <div class="form__element">
+                  
+                  <input
+                  matInput
+                  (keyup)="applyFilter($event)"
+                  placeholder="Search by SMS campaign name"
+                  class="field field--string"
+                  #input
+                />
+                 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__content no-padding overflow-visible min-height-auto">
+          <div>
+            <div>
+              <div class="table-border-horizontal">
+                <div class="table__container__container">
+                  <div class="table__container">
+                    <div
+                    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 w-full min-w-0"
+                  >
+                    
+          
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                      <!-- Position Column -->
+                      <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef>Id No.</th>
+                        <td mat-cell *matCellDef="let element" style="width: 10%;">{{ element.id }} </td>
+                      </ng-container>
+                    
+          
+                      <ng-container matColumnDef="Action">
+                        <th mat-header-cell *matHeaderCellDef>Action</th>
+                        <td mat-cell *matCellDef="let element" style="width: 1%;"> 
+                          <button mat-icon-button aria-label="Action - Edit/ Delete">
+                          <mat-icon>more_vert</mat-icon>
+                        </button>
+                          </td>
+                         
+                      </ng-container>
+                      <ng-container matColumnDef="title">
+                        <th mat-header-cell *matHeaderCellDef>Title</th>
+                        <td mat-cell *matCellDef="let element" style="width: 10%;">{{ element.title }} </td>
+                      </ng-container>
+                      <ng-container matColumnDef="type">
+                        <th mat-header-cell *matHeaderCellDef>Type</th>
+                        <td mat-cell *matCellDef="let element" style="width: 10%;">{{ element.type }} </td>
+                      </ng-container>
+                      <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef>Status</th>
+                        <td mat-cell *matCellDef="let element" style="width: 10%;">{{ element.status }} </td>
+                      </ng-container>
+                      <ng-container matColumnDef="tags">
+                        <th mat-header-cell *matHeaderCellDef>Tags.</th>
+                        <td mat-cell *matCellDef="let element" style="width: 10%;">{{ element.tags }} </td>
+                      </ng-container>
+                      <ng-container matColumnDef="createdByUser">
+                        <th mat-header-cell *matHeaderCellDef>CreatedBy</th>
+                        <td mat-cell *matCellDef="let element" style="width: 10%;">{{ element.createdByUser }} </td>
+                      </ng-container>
+                      <ng-container matColumnDef="createdOn">
+                        <th mat-header-cell *matHeaderCellDef>CreatedOn</th>
+                        <td mat-cell *matCellDef="let element" style="width: 10%;">{{ element.createdOn | date}} </td>
+                      </ng-container>
+          
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          
+                      <!-- Row shown when there is no matching data. -->
+                    </table>
+                    <mat-paginator
+                      [pageSizeOptions]="[10, 25, 100]"
+                      aria-label="Select page of users"
+                    ></mat-paginator>
+                  </div>
+                  </div>
+                 
+                </div>
+              </div>
+               
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

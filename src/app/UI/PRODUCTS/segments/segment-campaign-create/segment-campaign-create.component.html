@@ -1,0 +1,1127 @@
+<div class="flex flex-col flex-auto min-w-0">
+ 
+     
+        <header class="subhead">
+            <div class="subhead__section align-items-center">
+                <h4>Create segment</h4>
+                <div class="tooltip_wrapper tooltip--inline">
+                    <div class="tooltip_target tooltip--inline"><i class="fl-info fl-dark"></i></div>
+                </div>
+                <button [disabled]="loading" class="button margin-left-auto" type="submit">Save</button>
+            </div>
+        </header>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="">
+            <div class="segment__definition">
+                <div class="card margin-top-m">
+                    <div class="card__content overflow-visible min-height-auto">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row form__row">
+                                    <div class="col-3 form__lhs justify-content-end"><label>Name your segment</label></div>
+                                    <div class="col-6">
+                                        <div class="form__element">
+                                            <input type="text" placeholder="Segment Name" formControlName="SegmentName" class="field field--string undefined undefined" value="" />
+                                            <input type="hidden" formControlName="BrandCode" class="form-control"   value="6367f3e1704681208a35d4a2"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 margin-left-auto display-flex"><span class="margin-right-m margin-left-auto text--intermediate cursor-pointer align-items-center"> Reset All </span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card collapsible margin-top-m">
+                    <div class="card__header cursor-pointer">
+                        <h5 class=""><span>User </span></h5>
+                        <i class="card__header__icon fl-expand fl-dark"></i>
+                    </div>
+                    <div class="card__content overflow-visible no-padding min-height-auto">
+                        <div class="margin-top-xl margin-bottom-xl padding-left-xxl padding-right-xxl">
+                            <div class="display-flex align-items-center"><label class="">Visitor Type</label><span class="margin-left-auto text--intermediate cursor-pointer">Reset</span></div>
+                            <div class="row margin-top-m">
+                                <div class="col-3">
+                                    <div class="form__element form__element--flex react-select-wrapper-element">
+                                        <div class="Select select-width has-value Select--single">
+                                            <input name="VisitorType" type="hidden" value="" />
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-7--value">
+                                                    <div class="Select-value"><span class="Select-value-label" role="option" aria-selected="true" id="react-select-7--value-item">All Users</span></div>
+                                                    <div
+                                                        aria-expanded="false"
+                                                        aria-owns=""
+                                                        aria-activedescendant="react-select-7--value"
+                                                        aria-disabled="false"
+                                                        class="Select-input"
+                                                        role="combobox"
+                                                        tabindex="0"
+                                                        style="border: 0px; width: 1px; display: inline-block;"
+                                                    ></div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin-top-m no-border border-top padding-left-xxl padding-bottom-xl padding-top-xl padding-right-xxl">
+                            <div class="display-flex align-items-center"><label class=""> Last Seen </label><span class="margin-left-auto text--intermediate cursor-pointer">Reset</span></div>
+                            <div class="display-flex margin-top-m">
+                                <span class="col-1 verb-tag align-middle align-items-center justify-content-center">is</span>
+                                <div class="col-3">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div class="Select select-medium rolling-op align-middle is-searchable Select--single">
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-8--value">
+                                                    <div class="Select-placeholder">Select...</div>
+                                                    <div class="Select-input" style="display: inline-block;">
+                                                        <input aria-activedescendant="react-select-8--value" aria-expanded="false" aria-haspopup="false" aria-owns="" role="combobox" value="" style="box-sizing: content-box; width: 5px;" />
+                                                        <div
+                                                            style="
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                left: 0px;
+                                                                visibility: hidden;
+                                                                height: 0px;
+                                                                overflow: scroll;
+                                                                white-space: pre;
+                                                                font-size: 13px;
+                                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                    Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                font-weight: 400;
+                                                                font-style: normal;
+                                                                letter-spacing: normal;
+                                                                text-transform: none;
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin-top-m no-border border-top padding-left-xxl padding-bottom-xl padding-top-xl padding-right-xxl">
+                            <div class="display-flex align-items-center"><label class=""> Created On </label><span class="margin-left-auto text--intermediate cursor-pointer">Reset</span></div>
+                            <div class="display-flex margin-top-m">
+                                <span class="col-1 verb-tag align-middle align-items-center justify-content-center">is</span>
+                                <div class="col-3">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div class="Select select-medium rolling-op align-middle is-searchable Select--single">
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-9--value">
+                                                    <div class="Select-placeholder">Select...</div>
+                                                    <div class="Select-input" style="display: inline-block;">
+                                                        <input aria-activedescendant="react-select-9--value" aria-expanded="false" aria-haspopup="false" aria-owns="" role="combobox" value="" style="box-sizing: content-box; width: 5px;" />
+                                                        <div
+                                                            style="
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                left: 0px;
+                                                                visibility: hidden;
+                                                                height: 0px;
+                                                                overflow: scroll;
+                                                                white-space: pre;
+                                                                font-size: 13px;
+                                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                    Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                font-weight: 400;
+                                                                font-style: normal;
+                                                                letter-spacing: normal;
+                                                                text-transform: none;
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin-top-xl border-top padding-top-xl margin-bottom-xl padding-left-xxl padding-right-xxl">
+                            <div class="display-flex align-items-center">
+                                <label class="">Geo Filtering</label>
+                                <div class="col-4 margin-left-auto">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div class="Select select-operator is-searchable Select--single">
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-10--value">
+                                                    <div class="Select-placeholder">- Select Operator -</div>
+                                                    <div class="Select-input" style="display: inline-block;">
+                                                        <input aria-activedescendant="react-select-10--value" aria-expanded="false" aria-haspopup="false" aria-owns="" role="combobox" value="" style="box-sizing: content-box; width: 5px;" />
+                                                        <div
+                                                            style="
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                left: 0px;
+                                                                visibility: hidden;
+                                                                height: 0px;
+                                                                overflow: scroll;
+                                                                white-space: pre;
+                                                                font-size: 13px;
+                                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                    Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                font-weight: 400;
+                                                                font-style: normal;
+                                                                letter-spacing: normal;
+                                                                text-transform: none;
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text--intermediate cursor-pointer">Reset</span>
+                            </div>
+                            <div class="margin-top-m">
+                                <div class="row margin-top-m">
+                                    <div class="col-3">
+                                        <div class="form__element react-select-wrapper-element">
+                                            <div class="Select field--type-select undefined is-clearable is-searchable Select--single">
+                                                <div class="Select-control">
+                                                    <div class="Select-multi-value-wrapper" id="react-select-11--value">
+                                                        <div class="Select-placeholder">All Countries</div>
+                                                        <div class="Select-input" style="display: inline-block;">
+                                                            <input
+                                                                aria-activedescendant="react-select-11--value"
+                                                                aria-expanded="false"
+                                                                aria-haspopup="false"
+                                                                aria-owns=""
+                                                                role="combobox"
+                                                                value=""
+                                                                style="box-sizing: content-box; width: 5px;"
+                                                            />
+                                                            <div
+                                                                style="
+                                                                    position: absolute;
+                                                                    top: 0px;
+                                                                    left: 0px;
+                                                                    visibility: hidden;
+                                                                    height: 0px;
+                                                                    overflow: scroll;
+                                                                    white-space: pre;
+                                                                    font-size: 13px;
+                                                                    font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                        Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                    font-weight: 400;
+                                                                    font-style: normal;
+                                                                    letter-spacing: normal;
+                                                                    text-transform: none;
+                                                                "
+                                                            ></div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin-top-xl border-top padding-top-xl margin-bottom-xl padding-left-xxl padding-right-xxl">
+                            <div class="display-flex align-items-center"><label class="col">User Attribute</label><span class="margin-left-auto text--intermediate cursor-pointer">Reset</span></div>
+                            <div class="row margin-top-m">
+                                <div class="col-3">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div id="rss_6" class="r-ss-wrap field--type-select undefined undefined r-ss-wrap--we select">
+                                            <div
+                                                class="r-ss-trigger r-ss-placeholder"
+                                                role="combobox"
+                                                aria-disabled="false"
+                                                aria-haspopup="true"
+                                                aria-controls="rss_6_list"
+                                                aria-label="Select an Option"
+                                                aria-multiselectable="false"
+                                                tabindex="0"
+                                            >
+                                                Select an Option<span class="carat down"> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <span class="margin-left-auto display-flex align-self-end col-1 margin-bottom-xs"><i class="fl-add-circle fl-dark cursor-pointer"></i></span>
+                            </div>
+                        </div>
+                        <div class="margin-top-xl border-top padding-top-xl margin-bottom-xl padding-left-xxl padding-right-xxl">
+                            <div class="display-flex align-items-center"><label class="">First Acquisition Source</label><span class="margin-left-auto text--intermediate cursor-pointer">Reset</span></div>
+                            <div class="row margin-top-m">
+                                <div class="col margin-top-m padding-top-x padding-bottom-x padding-left-m padding-right-m border-dashed border-radius">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="form__element react-select-wrapper-element">
+                                                <div class="Select field--type-select undefined has-value is-searchable Select--single">
+                                                    <input name="disable AutoCompleted" type="hidden" value="custom" />
+                                                    <div class="Select-control">
+                                                        <div class="Select-multi-value-wrapper" id="react-select-12--value">
+                                                            <div class="Select-value"><span class="Select-value-label" role="option" aria-selected="true" id="react-select-12--value-item">Any Channel</span></div>
+                                                            <div class="Select-input" style="display: inline-block;">
+                                                                <input
+                                                                    aria-activedescendant="react-select-12--value"
+                                                                    aria-expanded="false"
+                                                                    aria-haspopup="false"
+                                                                    aria-owns=""
+                                                                    role="combobox"
+                                                                    value=""
+                                                                    style="box-sizing: content-box; width: 5px;"
+                                                                />
+                                                                <div
+                                                                    style="
+                                                                        position: absolute;
+                                                                        top: 0px;
+                                                                        left: 0px;
+                                                                        visibility: hidden;
+                                                                        height: 0px;
+                                                                        overflow: scroll;
+                                                                        white-space: pre;
+                                                                        font-size: 13px;
+                                                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                            Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                        font-weight: 400;
+                                                                        font-style: normal;
+                                                                        letter-spacing: normal;
+                                                                        text-transform: none;
+                                                                    "
+                                                                ></div>
+                                                            </div>
+                                                        </div>
+                                                        <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="row margin-top-m">
+                                            <div class="col-2 margin-top-x">Referrer Url (Web)</div>
+                                            <div class="col">
+                                                <div class="row-">
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="form__element react-select-wrapper-element">
+                                                                <div class="Select field--type-select undefined is-searchable Select--single">
+                                                                    <div class="Select-control">
+                                                                        <div class="Select-multi-value-wrapper" id="react-select-13--value">
+                                                                            <div class="Select-placeholder">Select...</div>
+                                                                            <div class="Select-input" style="display: inline-block;">
+                                                                                <input
+                                                                                    aria-activedescendant="react-select-13--value"
+                                                                                    aria-expanded="false"
+                                                                                    aria-haspopup="false"
+                                                                                    aria-owns=""
+                                                                                    role="combobox"
+                                                                                    value=""
+                                                                                    style="box-sizing: content-box; width: 5px;"
+                                                                                />
+                                                                                <div
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        top: 0px;
+                                                                                        left: 0px;
+                                                                                        visibility: hidden;
+                                                                                        height: 0px;
+                                                                                        overflow: scroll;
+                                                                                        white-space: pre;
+                                                                                        font-size: 13px;
+                                                                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                                                                                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                                        font-weight: 400;
+                                                                                        font-style: normal;
+                                                                                        letter-spacing: normal;
+                                                                                        text-transform: none;
+                                                                                    "
+                                                                                ></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-m">
+                                            <div class="col-2 margin-top-x">Landing Page (Web)</div>
+                                            <div class="col">
+                                                <div class="row-">
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="form__element react-select-wrapper-element">
+                                                                <div class="Select field--type-select undefined is-searchable Select--single">
+                                                                    <div class="Select-control">
+                                                                        <div class="Select-multi-value-wrapper" id="react-select-14--value">
+                                                                            <div class="Select-placeholder">Select...</div>
+                                                                            <div class="Select-input" style="display: inline-block;">
+                                                                                <input
+                                                                                    aria-activedescendant="react-select-14--value"
+                                                                                    aria-expanded="false"
+                                                                                    aria-haspopup="false"
+                                                                                    aria-owns=""
+                                                                                    role="combobox"
+                                                                                    value=""
+                                                                                    style="box-sizing: content-box; width: 5px;"
+                                                                                />
+                                                                                <div
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        top: 0px;
+                                                                                        left: 0px;
+                                                                                        visibility: hidden;
+                                                                                        height: 0px;
+                                                                                        overflow: scroll;
+                                                                                        white-space: pre;
+                                                                                        font-size: 13px;
+                                                                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                                                                                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                                        font-weight: 400;
+                                                                                        font-style: normal;
+                                                                                        letter-spacing: normal;
+                                                                                        text-transform: none;
+                                                                                    "
+                                                                                ></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-m">
+                                            <span class="col-2 display-flex align-self-center">Campaign Name</span>
+                                            <div class="col">
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="form__element react-select-wrapper-element">
+                                                                <div class="Select field--type-select undefined is-searchable Select--single">
+                                                                    <div class="Select-control">
+                                                                        <div class="Select-multi-value-wrapper" id="react-select-15--value">
+                                                                            <div class="Select-placeholder">Select...</div>
+                                                                            <div class="Select-input" style="display: inline-block;">
+                                                                                <input
+                                                                                    aria-activedescendant="react-select-15--value"
+                                                                                    aria-expanded="false"
+                                                                                    aria-haspopup="false"
+                                                                                    aria-owns=""
+                                                                                    role="combobox"
+                                                                                    value=""
+                                                                                    style="box-sizing: content-box; width: 5px;"
+                                                                                />
+                                                                                <div
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        top: 0px;
+                                                                                        left: 0px;
+                                                                                        visibility: hidden;
+                                                                                        height: 0px;
+                                                                                        overflow: scroll;
+                                                                                        white-space: pre;
+                                                                                        font-size: 13px;
+                                                                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                                                                                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                                        font-weight: 400;
+                                                                                        font-style: normal;
+                                                                                        letter-spacing: normal;
+                                                                                        text-transform: none;
+                                                                                    "
+                                                                                ></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-m">
+                                            <span class="col-2 display-flex align-self-center">Campaign Source</span>
+                                            <div class="col">
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="form__element react-select-wrapper-element">
+                                                                <div class="Select field--type-select undefined is-searchable Select--single">
+                                                                    <div class="Select-control">
+                                                                        <div class="Select-multi-value-wrapper" id="react-select-16--value">
+                                                                            <div class="Select-placeholder">Select...</div>
+                                                                            <div class="Select-input" style="display: inline-block;">
+                                                                                <input
+                                                                                    aria-activedescendant="react-select-16--value"
+                                                                                    aria-expanded="false"
+                                                                                    aria-haspopup="false"
+                                                                                    aria-owns=""
+                                                                                    role="combobox"
+                                                                                    value=""
+                                                                                    style="box-sizing: content-box; width: 5px;"
+                                                                                />
+                                                                                <div
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        top: 0px;
+                                                                                        left: 0px;
+                                                                                        visibility: hidden;
+                                                                                        height: 0px;
+                                                                                        overflow: scroll;
+                                                                                        white-space: pre;
+                                                                                        font-size: 13px;
+                                                                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                                                                                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                                        font-weight: 400;
+                                                                                        font-style: normal;
+                                                                                        letter-spacing: normal;
+                                                                                        text-transform: none;
+                                                                                    "
+                                                                                ></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-top-m">
+                                            <span class="col-2 display-flex align-self-center">Campaign Medium</span>
+                                            <div class="col">
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="form__element react-select-wrapper-element">
+                                                                <div class="Select field--type-select undefined is-searchable Select--single">
+                                                                    <div class="Select-control">
+                                                                        <div class="Select-multi-value-wrapper" id="react-select-17--value">
+                                                                            <div class="Select-placeholder">Select...</div>
+                                                                            <div class="Select-input" style="display: inline-block;">
+                                                                                <input
+                                                                                    aria-activedescendant="react-select-17--value"
+                                                                                    aria-expanded="false"
+                                                                                    aria-haspopup="false"
+                                                                                    aria-owns=""
+                                                                                    role="combobox"
+                                                                                    value=""
+                                                                                    style="box-sizing: content-box; width: 5px;"
+                                                                                />
+                                                                                <div
+                                                                                    style="
+                                                                                        position: absolute;
+                                                                                        top: 0px;
+                                                                                        left: 0px;
+                                                                                        visibility: hidden;
+                                                                                        height: 0px;
+                                                                                        overflow: scroll;
+                                                                                        white-space: pre;
+                                                                                        font-size: 13px;
+                                                                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                                                                                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                                        font-weight: 400;
+                                                                                        font-style: normal;
+                                                                                        letter-spacing: normal;
+                                                                                        text-transform: none;
+                                                                                    "
+                                                                                ></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1 align-self-end">
+                                    <span class="display-flex align-self-end"><i class="fl-add-circle fl-dark cursor-pointer"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin-top-xl border-top padding-top-xl margin-bottom-xl padding-left-xxl padding-right-xxl">
+                            <div class="display-flex align-items-center"><label class="">User IDs</label><span class="margin-left-auto text--intermediate cursor-pointer">Reset</span></div>
+                            <div class="row margin-top-m">
+                                <div class="col-3">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div class="Select field--type-select undefined is-searchable Select--single">
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-18--value">
+                                                    <div class="Select-placeholder">Select...</div>
+                                                    <div class="Select-input" style="display: inline-block;">
+                                                        <input aria-activedescendant="react-select-18--value" aria-expanded="false" aria-haspopup="false" aria-owns="" role="combobox" value="" style="box-sizing: content-box; width: 5px;" />
+                                                        <div
+                                                            style="
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                left: 0px;
+                                                                visibility: hidden;
+                                                                height: 0px;
+                                                                overflow: scroll;
+                                                                white-space: pre;
+                                                                font-size: 13px;
+                                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                    Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                font-weight: 400;
+                                                                font-style: normal;
+                                                                letter-spacing: normal;
+                                                                text-transform: none;
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin-top-xl border-top padding-top-xl padding-left-xxl padding-right-xxl padding-bottom-xxl">
+                            <div class="display-flex align-items-center"><label class="">Reachability</label><span class="margin-left-auto text--intermediate cursor-pointer">Reset</span></div>
+                            <div class="row margin-top-m">
+                                <div class="col-3">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div class="Select field--type-select undefined has-value is-searchable Select--single">
+                                            <input name="disable AutoCompleted" type="hidden" value="IN" />
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-19--value">
+                                                    <div class="Select-value"><span class="Select-value-label" role="option" aria-selected="true" id="react-select-19--value-item">Reachable on</span></div>
+                                                    <div class="Select-input" style="display: inline-block;">
+                                                        <input aria-activedescendant="react-select-19--value" aria-expanded="false" aria-haspopup="false" aria-owns="" role="combobox" value="" style="box-sizing: content-box; width: 5px;" />
+                                                        <div
+                                                            style="
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                left: 0px;
+                                                                visibility: hidden;
+                                                                height: 0px;
+                                                                overflow: scroll;
+                                                                white-space: pre;
+                                                                font-size: 13px;
+                                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                    Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                font-weight: 400;
+                                                                font-style: normal;
+                                                                letter-spacing: normal;
+                                                                text-transform: none;
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div class="Select field--type-select undefined is-searchable Select--multi">
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-20--value">
+                                                    <div class="Select-placeholder">e.g. Push</div>
+                                                    <div class="Select-input" style="display: inline-block;">
+                                                        <input aria-activedescendant="react-select-20--value" aria-expanded="false" aria-haspopup="false" aria-owns="" role="combobox" value="" style="box-sizing: content-box; width: 5px;" />
+                                                        <div
+                                                            style="
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                left: 0px;
+                                                                visibility: hidden;
+                                                                height: 0px;
+                                                                overflow: scroll;
+                                                                white-space: pre;
+                                                                font-size: 13px;
+                                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                    Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                font-weight: 400;
+                                                                font-style: normal;
+                                                                letter-spacing: normal;
+                                                                text-transform: none;
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin-top-xl border-top padding-top-xl padding-left-xxl padding-right-xxl padding-bottom-xxl">
+                            <div class="display-flex align-items-center"><label class="">Intelligent Attributes</label><span class="margin-left-auto text--intermediate cursor-pointer">Reset</span></div>
+                            <div class="row margin-top-m">
+                                <div class="col-3">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div class="Select field--type-select undefined has-value is-searchable Select--single">
+                                            <input name="disable AutoCompleted" type="hidden" value="userBestChannel" />
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-21--value">
+                                                    <div class="Select-value"><span class="Select-value-label" role="option" aria-selected="true" id="react-select-21--value-item">Best Channel</span></div>
+                                                    <div class="Select-input" style="display: inline-block;">
+                                                        <input aria-activedescendant="react-select-21--value" aria-expanded="false" aria-haspopup="false" aria-owns="" role="combobox" value="" style="box-sizing: content-box; width: 5px;" />
+                                                        <div
+                                                            style="
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                left: 0px;
+                                                                visibility: hidden;
+                                                                height: 0px;
+                                                                overflow: scroll;
+                                                                white-space: pre;
+                                                                font-size: 13px;
+                                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                    Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                font-weight: 400;
+                                                                font-style: normal;
+                                                                letter-spacing: normal;
+                                                                text-transform: none;
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div class="Select field--type-select undefined has-value is-searchable Select--single">
+                                            <input name="disable AutoCompleted" type="hidden" value="IN" />
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-22--value">
+                                                    <div class="Select-value"><span class="Select-value-label" role="option" aria-selected="true" id="react-select-22--value-item">is in</span></div>
+                                                    <div class="Select-input" style="display: inline-block;">
+                                                        <input aria-activedescendant="react-select-22--value" aria-expanded="false" aria-haspopup="false" aria-owns="" role="combobox" value="" style="box-sizing: content-box; width: 5px;" />
+                                                        <div
+                                                            style="
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                left: 0px;
+                                                                visibility: hidden;
+                                                                height: 0px;
+                                                                overflow: scroll;
+                                                                white-space: pre;
+                                                                font-size: 13px;
+                                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                    Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                font-weight: 400;
+                                                                font-style: normal;
+                                                                letter-spacing: normal;
+                                                                text-transform: none;
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div class="Select field--type-select undefined is-searchable Select--multi">
+                                            <div class="Select-control">
+                                                <div class="Select-multi-value-wrapper" id="react-select-23--value">
+                                                    <div class="Select-placeholder">e.g. Push</div>
+                                                    <div class="Select-input" style="display: inline-block;">
+                                                        <input aria-activedescendant="react-select-23--value" aria-expanded="false" aria-haspopup="false" aria-owns="" role="combobox" value="" style="box-sizing: content-box; width: 5px;" />
+                                                        <div
+                                                            style="
+                                                                position: absolute;
+                                                                top: 0px;
+                                                                left: 0px;
+                                                                visibility: hidden;
+                                                                height: 0px;
+                                                                overflow: scroll;
+                                                                white-space: pre;
+                                                                font-size: 13px;
+                                                                font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                    Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                font-weight: 400;
+                                                                font-style: normal;
+                                                                letter-spacing: normal;
+                                                                text-transform: none;
+                                                            "
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                                <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card collapsible margin-top-m">
+                    <div class="card__header cursor-pointer">
+                        <h5 class=""><span>Behavioral</span></h5>
+                        <i class="card__header__icon fl-expand fl-dark"></i>
+                    </div>
+                    <div class="card__content overflow-visible no-padding min-height-auto">
+                        <div class="padding-top-xl padding-left-xxl padding-right-xxl padding-bottom-xl">
+                            <div class="display-flex"><label class="">Users who DID these events :</label><span class="margin-left-auto text--intermediate cursor-pointer">Reset</span></div>
+                            <div class="row"></div>
+                            <div class="row margin-top-m">
+                                <div class="col-4">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div
+                                            class="field--type-select undefined undefined r-ss-wrap field--type-select select-width r-ss-wrap--we select"
+                                            id="we-downshift-exp"
+                                            role="combobox"
+                                            aria-expanded="false"
+                                            aria-haspopup="listbox"
+                                            aria-labelledby="downshift-0-label"
+                                        >
+                                            <div type="button" role="button" aria-label="open menu" aria-haspopup="true" data-toggle="true" class="r-ss-trigger r-ss-placeholder">
+                                                <span for="downshift-0-input" id="downshift-0-label" class="handle-text-overflow">- </span><span class="carat down"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="margin-left-auto display-flex align-self-start col-1 margin-top-m"><i class="fl-trash fl-dark cursor-pointer"></i></span>
+                            </div>
+                        </div>
+                        <div class="row border-top--dashed"></div>
+                        <div class="margin-top-xl padding-left-xxl padding-right-xxl">
+                            <div class="row margin-top-25 margin-left-0">
+                                <div class="undefined form__element">
+                                    <div class="pill__group clearfix pill__group-is-logical">
+                                        <label class="pill__label"><input type="radio" name="pill-set" class="pill__button" readonly="" />And</label>
+                                        <label class="pill__label"><input type="radio" name="pill-set" class="pill__button" readonly="" />Or</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row margin-top-xl margin-left-0 border-top--dashed"></div>
+                        <div class="padding-top-xl padding-left-xxl padding-right-xxl padding-bottom-xl">
+                            <div class="display-flex"><label class="">Users who DID NOT do these events :</label></div>
+                            <div class="row"></div>
+                            <div class="row margin-top-m">
+                                <div class="col-4">
+                                    <div class="form__element react-select-wrapper-element">
+                                        <div
+                                            class="field--type-select undefined undefined r-ss-wrap field--type-select select-width r-ss-wrap--we select"
+                                            id="we-downshift-exp"
+                                            role="combobox"
+                                            aria-expanded="false"
+                                            aria-haspopup="listbox"
+                                            aria-labelledby="downshift-1-label"
+                                        >
+                                            <div type="button" role="button" aria-label="open menu" aria-haspopup="true" data-toggle="true" class="r-ss-trigger r-ss-placeholder">
+                                                <span for="downshift-1-input" id="downshift-1-label" class="handle-text-overflow">- </span><span class="carat down"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="margin-left-auto display-flex align-self-start col-1 margin-top-m"><i class="fl-trash fl-dark cursor-pointer"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card collapsible margin-top-m">
+                    <div class="card__header cursor-pointer">
+                        <h5 class=""><span>Technology </span></h5>
+                        <i class="card__header__icon fl-expand fl-dark"></i>
+                    </div>
+                    <div class="card__content overflow-visible min-height-auto">
+                        <div class="card collapsible margin-top-m box-shadow-none border">
+                            <div class="card__header cursor-pointer">
+                                <h5 class=""><span>Android </span></h5>
+                                <i class="card__header__icon fl-expand fl-dark"></i>
+                            </div>
+                            <div class="card__content overflow-visible no-padding min-height-auto">
+                                <div class="padding-top-xl padding-bottom-xl padding-left-xxl padding-right-xxl">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form__element react-select-wrapper-element">
+                                                <div class="Select select-property is-searchable Select--single">
+                                                    <div class="Select-control">
+                                                        <div class="Select-multi-value-wrapper" id="react-select-26--value">
+                                                            <div class="Select-placeholder">- Select a property -</div>
+                                                            <div class="Select-input" style="display: inline-block;">
+                                                                <input
+                                                                    aria-activedescendant="react-select-26--value"
+                                                                    aria-expanded="false"
+                                                                    aria-haspopup="false"
+                                                                    aria-owns=""
+                                                                    role="combobox"
+                                                                    value=""
+                                                                    style="box-sizing: content-box; width: 5px;"
+                                                                />
+                                                                <div
+                                                                    style="
+                                                                        position: absolute;
+                                                                        top: 0px;
+                                                                        left: 0px;
+                                                                        visibility: hidden;
+                                                                        height: 0px;
+                                                                        overflow: scroll;
+                                                                        white-space: pre;
+                                                                        font-size: 13px;
+                                                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                            Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                        font-weight: 400;
+                                                                        font-style: normal;
+                                                                        letter-spacing: normal;
+                                                                        text-transform: none;
+                                                                    "
+                                                                ></div>
+                                                            </div>
+                                                        </div>
+                                                        <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card collapsible margin-top-m box-shadow-none border">
+                            <div class="card__header cursor-pointer">
+                                <h5 class=""><span>iOS </span></h5>
+                                <i class="card__header__icon fl-expand fl-dark"></i>
+                            </div>
+                            <div class="card__content overflow-visible no-padding min-height-auto">
+                                <div class="padding-top-xl padding-bottom-xl padding-left-xxl padding-right-xxl">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form__element react-select-wrapper-element">
+                                                <div class="Select select-property is-searchable Select--single">
+                                                    <div class="Select-control">
+                                                        <div class="Select-multi-value-wrapper" id="react-select-25--value">
+                                                            <div class="Select-placeholder">- Select a property -</div>
+                                                            <div class="Select-input" style="display: inline-block;">
+                                                                <input
+                                                                    aria-activedescendant="react-select-25--value"
+                                                                    aria-expanded="false"
+                                                                    aria-haspopup="false"
+                                                                    aria-owns=""
+                                                                    role="combobox"
+                                                                    value=""
+                                                                    style="box-sizing: content-box; width: 5px;"
+                                                                />
+                                                                <div
+                                                                    style="
+                                                                        position: absolute;
+                                                                        top: 0px;
+                                                                        left: 0px;
+                                                                        visibility: hidden;
+                                                                        height: 0px;
+                                                                        overflow: scroll;
+                                                                        white-space: pre;
+                                                                        font-size: 13px;
+                                                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                            Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                        font-weight: 400;
+                                                                        font-style: normal;
+                                                                        letter-spacing: normal;
+                                                                        text-transform: none;
+                                                                    "
+                                                                ></div>
+                                                            </div>
+                                                        </div>
+                                                        <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card collapsible margin-top-m box-shadow-none border">
+                            <div class="card__header cursor-pointer">
+                                <h5 class=""><span>Web </span></h5>
+                                <i class="card__header__icon fl-expand fl-dark"></i>
+                            </div>
+                            <div class="card__content overflow-visible no-padding min-height-auto">
+                                <div class="padding-top-xl padding-bottom-xl padding-left-xxl padding-right-xxl">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form__element react-select-wrapper-element">
+                                                <div class="Select select-property is-searchable Select--single">
+                                                    <div class="Select-control">
+                                                        <div class="Select-multi-value-wrapper" id="react-select-24--value">
+                                                            <div class="Select-placeholder">- Select a property -</div>
+                                                            <div class="Select-input" style="display: inline-block;">
+                                                                <input
+                                                                    aria-activedescendant="react-select-24--value"
+                                                                    aria-expanded="false"
+                                                                    aria-haspopup="false"
+                                                                    aria-owns=""
+                                                                    role="combobox"
+                                                                    value=""
+                                                                    style="box-sizing: content-box; width: 5px;"
+                                                                />
+                                                                <div
+                                                                    style="
+                                                                        position: absolute;
+                                                                        top: 0px;
+                                                                        left: 0px;
+                                                                        visibility: hidden;
+                                                                        height: 0px;
+                                                                        overflow: scroll;
+                                                                        white-space: pre;
+                                                                        font-size: 13px;
+                                                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans',
+                                                                            Cantarell, Oxygen, Ubuntu, 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                                                        font-weight: 400;
+                                                                        font-style: normal;
+                                                                        letter-spacing: normal;
+                                                                        text-transform: none;
+                                                                    "
+                                                                ></div>
+                                                            </div>
+                                                        </div>
+                                                        <span class="Select-arrow-zone"><span class="Select-arrow"></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="last-child opacity--zero">© webengage</div>
+            </div>
+            <div class="segment__count">
+                <div class="card">
+                    <div class="card__header text-center">
+                        <h5 class="">
+                            Segment Details<button class="margin-left-xs button button--icon button--icon--primary"><i class="fl-sync fl-light"></i></button>
+                        </h5>
+                    </div>
+                    <div class="card__content position-absolute padding-m min-height-auto">
+                        <div id="we-pie-chart" data-highcharts-chart="1" style="height: 240px;">
+                            <div
+                                id="highcharts-bydthch-3"
+                                dir="ltr"
+                                class="highcharts-container"
+                                style="
+                                    position: relative;
+                                    overflow: hidden;
+                                    width: 300px;
+                                    height: 240px;
+                                    text-align: left;
+                                    line-height: normal;
+                                    z-index: 0;
+                                    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                                    font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                                        'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                "
+                            >
+                                <svg
+                                    version="1.1"
+                                    class="highcharts-root"
+                                    style="
+                                        font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto', 'Noto', 'Droid Sans', 'Cantarell', 'Oxygen',
+                                            'Ubuntu', 'Franklin Gothic Medium', 'Century Gothic', 'Liberation Sans', sans-serif;
+                                        font-size: 12px;
+                                    "
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="300"
+                                    height="240"
+                                    viewBox="0 0 300 240"
+                                >
+                                    <desc>Created with Highcharts 6.2.0</desc>
+                                    <defs>
+                                        <clipPath id="highcharts-bydthch-5"><rect x="0" y="0" width="150" height="215" fill="none"></rect></clipPath>
+                                    </defs>
+                                    <rect fill="transparent" class="highcharts-background" x="0" y="0" width="300" height="240" rx="0" ry="0"></rect>
+                                    <rect fill="none" class="highcharts-plot-background" x="10" y="10" width="150" height="215"></rect>
+                                    <rect fill="none" class="highcharts-plot-border" data-z-index="1" x="10" y="10" width="150" height="215"></rect>
+                                    <g class="highcharts-series-group" data-z-index="3">
+                                        <g data-z-index="0.1" class="highcharts-series highcharts-series-0 highcharts-pie-series highcharts-tracker" transform="translate(10,10) scale(1 1)">
+                                            <path
+                                                fill="#8bd737"
+                                                d="M 79.98370614370438 27.500001659310968 A 80 80 0 1 1 79.88888160495428 27.500077170647955 M 79.89999344445884 35.50006945358315 A 72 72 0 1 0 79.98533552933395 35.50000149337987 "
+                                                transform="translate(0,0)"
+                                                stroke="#8bd737"
+                                                stroke-width="1"
+                                                stroke-linejoin="round"
+                                                class="highcharts-point highcharts-color-0"
+                                            ></path>
+                                        </g>
+                                        <g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-pie-series" transform="translate(10,10) scale(1 1)"></g>
+                                    </g>
+                                    <g class="highcharts-exporting-group" data-z-index="3"></g>
+                                    <text x="10" text-anchor="start" class="highcharts-title" data-z-index="4" style="color: #6e707a; font-size: 13px; font-weight: 600; fill: #6e707a;" y="20"></text>
+                                    <text x="150" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: #666666; fill: #666666;" y="24"></text>
+                                    <g class="highcharts-legend" data-z-index="7" transform="translate(172,94)">
+                                        <rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="118" height="48" visibility="visible"></rect>
+                                        <g data-z-index="1">
+                                            <g>
+                                                <g class="highcharts-legend-item highcharts-pie-series highcharts-color-0" data-z-index="1" transform="translate(8,3)">
+                                                    <text
+                                                        x="21"
+                                                        style="color: #81838c; font-size: 13px; font-weight: normal; cursor: pointer; overflow: hidden; white-space: nowrap; fill: #81838c;"
+                                                        text-anchor="start"
+                                                        data-z-index="2"
+                                                        y="26"
+                                                    >
+                                                        <tspan>Targeted</tspan>
+                                                    </text>
+                                                    <rect x="1.5" y="14" width="13" height="13" fill="#8bd737" rx="6.5" ry="6.5" class="highcharts-point" data-z-index="3"></rect>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="">
+                            <p class="row padding-top-m padding-bottom-x border-bottom margin-bottom-xs align-items-center">
+                                <span class="col-6">Total Users </span><span class="col-0">:</span><span class="col"> <b>624,652</b></span>
+                            </p>
+                            <p class="row padding-top-m padding-bottom-x border-bottom margin-bottom-xs">
+                                <span class="col-6">Known Users </span><span class="col-0">:</span><span class="col"> <b>208,678</b></span>
+                            </p>
+                            <p class="row padding-top-m padding-bottom-x border-bottom margin-bottom-xs">
+                                <span class="col-6">Unknown Users </span><span class="col-0">:</span><span class="col"> <b>415,974</b></span>
+                            </p>
+                            <p class="row padding-top-m padding-bottom-x border-bottom margin-bottom-xs">
+                                <span class="col-6">Reachable Users </span><span class="col-0">:</span><span class="col"> <b>521,363</b></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button [disabled]="loading" class="button">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Save
+      </button>
+      <button [disabled]="loading" class="button margin-left-auto" type="submit"> <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> Save</button>
+        </form>
+    
+    
+
+</div>

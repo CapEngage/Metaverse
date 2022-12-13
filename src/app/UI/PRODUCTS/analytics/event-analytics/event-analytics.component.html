@@ -1,0 +1,1514 @@
+<div class="flex flex-col flex-auto min-w-0">
+  <div>
+    <header class="subhead">
+      <div class="subhead__section align-items-center">
+        <h4 class="float-left">Events</h4>
+        <span class="margin-left-xs"
+          ><div class="tooltip_wrapper tooltip--inline">
+            <div class="tooltip_target tooltip--inline">
+              <i class="fl-info fl-dark"></i>
+            </div></div></span
+        ><span class="margin-left-auto"
+          ><div class="pop-over smart-date">
+            <div class="pop-over__head">
+              <div>
+                <span>Last 7 days</span
+                ><i class="fl-chevron-bottom fl-dark"></i>
+              </div>
+            </div></div
+        ></span>
+      </div>
+    </header>
+    <div class="container">
+      <div class="card">
+        <div class="card__header">
+          <div class="row align-items-center">
+            <div class="col flex-1 max-w-1280">
+              <div class="row">
+                <div class="col">
+                  <div class="row align-items-center">
+                    <div class="col flex-1">
+                      <div
+                        class="form__element form__element--flex react-select-wrapper-element"
+                      >
+                        <label class="label label--flex undefined" for="metric"
+                          >SHOW</label
+                        >
+                        <div
+                          class="Select select-width has-value Select--single"
+                        >
+                          <input name="metric" type="hidden" value="COUNT" />
+                          <div class="Select-control">
+                            <div
+                              class="Select-multi-value-wrapper"
+                              id="react-select-22--value"
+                            >
+                              <div class="Select-value">
+                                <span
+                                  class="Select-value-label"
+                                  role="option"
+                                  aria-selected="true"
+                                  id="react-select-22--value-item"
+                                  >Occurrences</span
+                                >
+                              </div>
+                              <div
+                                aria-expanded="false"
+                                aria-owns=""
+                                aria-activedescendant="react-select-22--value"
+                                aria-disabled="false"
+                                class="Select-input"
+                                role="combobox"
+                                tabindex="0"
+                                style="
+                                  border: 0px;
+                                  width: 1px;
+                                  display: inline-block;
+                                "
+                              ></div>
+                            </div>
+                            <span class="Select-arrow-zone"
+                              ><span class="Select-arrow"></span
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col flex-1">
+                      <div
+                        class="form__element form__element--flex react-select-wrapper-element"
+                      >
+                        <label class="label label--flex undefined" for="events"
+                          >OF</label
+                        >
+                        <div
+                          class="r-ss-wrap field--type-select select-width r-ss-wrap--we select"
+                          id="we-downshift-exp"
+                          role="combobox"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-labelledby="downshift-0-label"
+                        >
+                          <div
+                            type="button"
+                            role="button"
+                            aria-label="open menu"
+                            aria-haspopup="true"
+                            data-toggle="true"
+                            class="r-ss-trigger"
+                          >
+                            <span
+                              for="downshift-0-input"
+                              id="downshift-0-label"
+                              class="handle-text-overflow"
+                              >All Custom Events </span
+                            ><span class="carat down"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col no-padding-left flex-0">
+                      <div class="filter">
+                        <span class="cursor-pointer"
+                          ><i
+                            class="fl-filter fl-dark fl-disabled"
+                            data-count="0"
+                          ></i
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col flex-1">
+                  <div class="row">
+                    <div class="col col-6">
+                      <div
+                        class="form__element form__element--flex react-select-wrapper-element"
+                      >
+                        <label class="label label--flex undefined" for="over"
+                          >OVER</label
+                        >
+                        <div
+                          id="rss_16"
+                          class="r-ss-wrap field--type-select undefined select-width r-ss-wrap--we select"
+                        >
+                          <div
+                            class="r-ss-trigger r-ss-disabled r-ss-placeholder"
+                            role="combobox"
+                            aria-disabled="true"
+                            aria-haspopup="true"
+                            aria-controls="rss_16_list"
+                            aria-label="-"
+                            aria-multiselectable="false"
+                            tabindex="0"
+                          >
+                            -<span class="carat down"> </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col col-6">
+                      <div
+                        class="form__element form__element--flex react-select-wrapper-element"
+                      >
+                        <label class="label label--flex undefined" for="split"
+                          >SPLIT BY</label
+                        >
+                        <div
+                          id="rss_25"
+                          class="r-ss-wrap field--type-select undefined select-width r-ss-wrap--we select"
+                        >
+                          <div
+                            class="r-ss-trigger r-ss-placeholder"
+                            role="combobox"
+                            aria-disabled="false"
+                            aria-haspopup="true"
+                            aria-controls="rss_25_list"
+                            aria-label="-"
+                            aria-multiselectable="false"
+                            tabindex="0"
+                          >
+                            -<span class="carat down"> </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col flex-0">
+                  <button
+                    class="button button--icon button--icon--primary button--icon--disabled"
+                    disabled=""
+                  >
+                    <i class="fl-sync fl-light"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col flex-0 margin-left-auto border-left">
+              <i
+                class="fl-download fl-dark cursor-pointer"
+                title="download data as csv"
+              ></i>
+            </div>
+            <div class="col flex-0 border-left">
+              <button class="button--no-style">
+                <i class="fl-pin-large fl-dark"></i>
+              </button>
+            </div>
+            <div class="col flex-0 margin-left-auto- border-left">
+              <div class="row justify-content-end">
+                <div class="pop-over">
+                  <div class="pop-over__head">
+                    <i class="fl-vert-more fl-dark"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card__content no-padding min-height-auto">
+          <div>
+            <div
+              class="padding-top-xl padding-bottom-xl padding-left-xxl padding-right-x border-bottom margin-bottom-xxl"
+            >
+              <label>Total Occurrences:</label
+              ><span class="values">390,746</span>
+            </div>
+            <div
+              class="padding-top-x padding-bottom-x padding-left-x padding-right-xxl"
+            >
+              <div>
+                <div id="bar-chart" class="we-chart" data-highcharts-chart="15">
+                  <div
+                    id="highcharts-742uaw2-407"
+                    dir="ltr"
+                    class="highcharts-container"
+                    style="
+                      position: relative;
+                      overflow: hidden;
+                      width: 1580px;
+                      height: 400px;
+                      text-align: left;
+                      line-height: normal;
+                      z-index: 0;
+                      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                      font-family: -apple-system, BlinkMacSystemFont,
+                        'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                        'Helvetica Neue', Helvetica, 'Fira Sans', Roboto, Noto,
+                        'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                        'Franklin Gothic Medium', 'Century Gothic',
+                        'Liberation Sans', sans-serif;
+                    "
+                  >
+                    <svg
+                      version="1.1"
+                      class="highcharts-root"
+                      style="
+                        font-family: -apple-system, BlinkMacSystemFont,
+                          'Avenir Next', 'Avenir', 'Segoe UI', 'Lucida Grande',
+                          'Helvetica Neue', 'Helvetica', 'Fira Sans', 'Roboto',
+                          'Noto', 'Droid Sans', 'Cantarell', 'Oxygen', 'Ubuntu',
+                          'Franklin Gothic Medium', 'Century Gothic',
+                          'Liberation Sans', sans-serif;
+                        font-size: 12px;
+                      "
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1580"
+                      height="400"
+                      viewBox="0 0 1580 400"
+                    >
+                      <desc>Created with Highcharts 6.2.0</desc>
+                      <defs>
+                        <clipPath id="highcharts-742uaw2-408">
+                          <rect
+                            x="0"
+                            y="0"
+                            width="1494"
+                            height="352"
+                            fill="none"
+                          ></rect>
+                        </clipPath>
+                      </defs>
+                      <rect
+                        fill="#ffffff"
+                        class="highcharts-background"
+                        x="0"
+                        y="0"
+                        width="1580"
+                        height="400"
+                        rx="0"
+                        ry="0"
+                      ></rect>
+                      <rect
+                        fill="none"
+                        class="highcharts-plot-background"
+                        x="76"
+                        y="10"
+                        width="1494"
+                        height="352"
+                      ></rect>
+                      <g
+                        class="highcharts-grid highcharts-xaxis-grid"
+                        data-z-index="1"
+                      >
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 117.5 10 L 117.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 200.5 10 L 200.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 283.5 10 L 283.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 366.5 10 L 366.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 449.5 10 L 449.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 532.5 10 L 532.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 615.5 10 L 615.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 698.5 10 L 698.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 781.5 10 L 781.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 864.5 10 L 864.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 947.5 10 L 947.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 1030.5 10 L 1030.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 1113.5 10 L 1113.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 1196.5 10 L 1196.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 1279.5 10 L 1279.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 1362.5 10 L 1362.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 1445.5 10 L 1445.5 362"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 1528.5 10 L 1528.5 362"
+                          opacity="1"
+                        ></path>
+                      </g>
+                      <g
+                        class="highcharts-grid highcharts-yaxis-grid"
+                        data-z-index="1"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#e6e6e6"
+                          stroke-width="1"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 76 362.5 L 1570 362.5"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          stroke="#e6e6e6"
+                          stroke-width="1"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 76 303.5 L 1570 303.5"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          stroke="#e6e6e6"
+                          stroke-width="1"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 76 245.5 L 1570 245.5"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          stroke="#e6e6e6"
+                          stroke-width="1"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 76 186.5 L 1570 186.5"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          stroke="#e6e6e6"
+                          stroke-width="1"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 76 127.5 L 1570 127.5"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          stroke="#e6e6e6"
+                          stroke-width="1"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 76 69.5 L 1570 69.5"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          stroke="#e6e6e6"
+                          stroke-width="1"
+                          data-z-index="1"
+                          class="highcharts-grid-line"
+                          d="M 76 9.5 L 1570 9.5"
+                          opacity="1"
+                        ></path>
+                      </g>
+                      <rect
+                        fill="none"
+                        class="highcharts-plot-border"
+                        data-z-index="1"
+                        x="76"
+                        y="10"
+                        width="1494"
+                        height="352"
+                      ></rect>
+                      <g
+                        class="highcharts-axis highcharts-xaxis"
+                        data-z-index="2"
+                      >
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 117.5 362 L 117.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 200.5 362 L 200.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 283.5 362 L 283.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 366.5 362 L 366.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 449.5 362 L 449.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 532.5 362 L 532.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 615.5 362 L 615.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 698.5 362 L 698.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 781.5 362 L 781.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 864.5 362 L 864.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 947.5 362 L 947.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 1030.5 362 L 1030.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 1113.5 362 L 1113.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 1196.5 362 L 1196.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 1279.5 362 L 1279.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 1362.5 362 L 1362.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 1445.5 362 L 1445.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-tick"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          d="M 1528.5 362 L 1528.5 372"
+                          opacity="1"
+                        ></path>
+                        <path
+                          fill="none"
+                          class="highcharts-axis-line"
+                          stroke="#ccd6eb"
+                          stroke-width="1"
+                          data-z-index="7"
+                          d="M 76 362.5 L 1570 362.5"
+                        ></path>
+                      </g>
+                      <g
+                        class="highcharts-axis highcharts-yaxis"
+                        data-z-index="2"
+                      >
+                        <text
+                          x="26"
+                          data-z-index="7"
+                          text-anchor="middle"
+                          transform="translate(0,0) rotate(270 26 186)"
+                          class="highcharts-axis-title"
+                          style="color: #6e707a; font-size: 12px; fill: #6e707a"
+                          y="186"
+                        >
+                          <tspan>Occurrences</tspan>
+                        </text>
+                        <path
+                          fill="none"
+                          class="highcharts-axis-line"
+                          data-z-index="7"
+                          d="M 76 10 L 76 362"
+                        ></path>
+                      </g>
+                      <g class="highcharts-series-group" data-z-index="3">
+                        <g
+                          data-z-index="0.1"
+                          class="highcharts-series highcharts-series-0 highcharts-column-series highcharts-color-0 highcharts-tracker"
+                          transform="translate(76,10) scale(1 1)"
+                          style="cursor: pointer"
+                          clip-path="url(#highcharts-742uaw2-408)"
+                        >
+                          <rect
+                            x="31.5"
+                            y="61.5"
+                            width="20"
+                            height="291"
+                            fill="rgb(253,87,141)"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="114.5"
+                            y="154.5"
+                            width="20"
+                            height="198"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="197.5"
+                            y="220.5"
+                            width="20"
+                            height="132"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="280.5"
+                            y="254.5"
+                            width="20"
+                            height="98"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="363.5"
+                            y="266.5"
+                            width="20"
+                            height="86"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="446.5"
+                            y="319.5"
+                            width="20"
+                            height="33"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="529.5"
+                            y="330.5"
+                            width="20"
+                            height="22"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="612.5"
+                            y="334.5"
+                            width="20"
+                            height="18"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="695.5"
+                            y="339.5"
+                            width="20"
+                            height="13"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="778.5"
+                            y="341.5"
+                            width="20"
+                            height="11"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="861.5"
+                            y="349.5"
+                            width="20"
+                            height="3"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="944.5"
+                            y="349.5"
+                            width="20"
+                            height="3"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="1027.5"
+                            y="349.5"
+                            width="20"
+                            height="3"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="1110.5"
+                            y="350.5"
+                            width="20"
+                            height="2"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="1193.5"
+                            y="350.5"
+                            width="20"
+                            height="2"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="1276.5"
+                            y="351.5"
+                            width="20"
+                            height="1"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="1359.5"
+                            y="352.5"
+                            width="20"
+                            height="0"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                          <rect
+                            x="1442.5"
+                            y="352.5"
+                            width="20"
+                            height="0"
+                            fill="#FD578D"
+                            stroke="#FD578D"
+                            stroke-width="1"
+                            class="highcharts-point highcharts-color-0"
+                          ></rect>
+                        </g>
+                        <g
+                          data-z-index="0.1"
+                          class="highcharts-markers highcharts-series-0 highcharts-column-series highcharts-color-0"
+                          transform="translate(76,10) scale(1 1)"
+                          clip-path="none"
+                        ></g>
+                      </g>
+                      <g
+                        class="highcharts-exporting-group"
+                        data-z-index="3"
+                      ></g>
+                      <text
+                        x="790"
+                        text-anchor="middle"
+                        class="highcharts-title"
+                        data-z-index="4"
+                        style="color: #333333; font-size: 18px; fill: #333333"
+                        y="24"
+                      ></text>
+                      <text
+                        x="790"
+                        text-anchor="middle"
+                        class="highcharts-subtitle"
+                        data-z-index="4"
+                        style="color: #666666; fill: #666666"
+                        y="24"
+                      ></text>
+                      <g
+                        class="highcharts-axis-labels highcharts-xaxis-labels"
+                        data-z-index="7"
+                      ></g>
+                      <g
+                        class="highcharts-axis-labels highcharts-yaxis-labels"
+                        data-z-index="7"
+                      >
+                        <text
+                          x="61"
+                          style="
+                            color: #666666;
+                            cursor: default;
+                            font-size: 11px;
+                            fill: #666666;
+                          "
+                          text-anchor="end"
+                          transform="translate(0,0)"
+                          y="366"
+                          opacity="1"
+                        >
+                          0
+                        </text>
+                        <text
+                          x="61"
+                          style="
+                            color: #666666;
+                            cursor: default;
+                            font-size: 11px;
+                            fill: #666666;
+                          "
+                          text-anchor="end"
+                          transform="translate(0,0)"
+                          y="307"
+                          opacity="1"
+                        >
+                          25k
+                        </text>
+                        <text
+                          x="61"
+                          style="
+                            color: #666666;
+                            cursor: default;
+                            font-size: 11px;
+                            fill: #666666;
+                          "
+                          text-anchor="end"
+                          transform="translate(0,0)"
+                          y="248"
+                          opacity="1"
+                        >
+                          50k
+                        </text>
+                        <text
+                          x="61"
+                          style="
+                            color: #666666;
+                            cursor: default;
+                            font-size: 11px;
+                            fill: #666666;
+                          "
+                          text-anchor="end"
+                          transform="translate(0,0)"
+                          y="190"
+                          opacity="1"
+                        >
+                          75k
+                        </text>
+                        <text
+                          x="61"
+                          style="
+                            color: #666666;
+                            cursor: default;
+                            font-size: 11px;
+                            fill: #666666;
+                          "
+                          text-anchor="end"
+                          transform="translate(0,0)"
+                          y="131"
+                          opacity="1"
+                        >
+                          100k
+                        </text>
+                        <text
+                          x="61"
+                          style="
+                            color: #666666;
+                            cursor: default;
+                            font-size: 11px;
+                            fill: #666666;
+                          "
+                          text-anchor="end"
+                          transform="translate(0,0)"
+                          y="72"
+                          opacity="1"
+                        >
+                          125k
+                        </text>
+                        <text
+                          x="61"
+                          style="
+                            color: #666666;
+                            cursor: default;
+                            font-size: 11px;
+                            fill: #666666;
+                          "
+                          text-anchor="end"
+                          transform="translate(0,0)"
+                          y="14"
+                          opacity="1"
+                        >
+                          150k
+                        </text>
+                      </g>
+                      <g
+                        class="highcharts-label highcharts-tooltip highcharts-color-0"
+                        style="pointer-events: none; white-space: nowrap"
+                        data-z-index="8"
+                        transform="translate(40,-9999)"
+                        opacity="0"
+                        visibility="visible"
+                      ></g>
+                    </svg>
+                    <div
+                      class="highcharts-axis-labels highcharts-xaxis-labels"
+                      style="
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        opacity: 1;
+                      "
+                    >
+                      <span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 101.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        >Search</span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 172.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Product - Page Viewed"
+                          >Product - ...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 256px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Sort Applied">Sort Appli...</span></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 340px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Cart - Viewed">Cart - Vie...</span></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 432px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        >Browse</span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 504.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Product - Category Viewed"
+                          >Product - ...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 587.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Product - Quantity Selected"
+                          >Product - ...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 670.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Product - Added to Cart"
+                          >Product - ...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 750.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Promotion Clicked"
+                          >Promotion ...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 838.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Wishlist - Viewed"
+                          >Wishlist -...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 917.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Checkout - Shipping Method Selected"
+                          >Checkout -...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 1000.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Checkout - Payment Added"
+                          >Checkout -...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 1085.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Product - Removed from Cart"
+                          >Product - ...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 1170.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Cart - Start Checkout"
+                          >Cart - Sta...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 1253.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Wishlist - Added"
+                          >Wishlist -...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 1332.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Product Shared">Product Sh...</span></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 1415.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Checkout - Completed"
+                          >Checkout -...</span
+                        ></span
+                      ><span
+                        opacity="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 11px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(102, 102, 102);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 1498.5px;
+                          top: 370px;
+                          transform: rotate(0deg);
+                          transform-origin: 50% 11px;
+                          opacity: 1;
+                        "
+                        ><span title="Checkout - Address Added"
+                          >Checkout -...</span
+                        ></span
+                      >
+                    </div>
+                    <div
+                      class="highcharts-label highcharts-tooltip highcharts-color-0"
+                      style="
+                        position: absolute;
+                        left: 40px;
+                        top: -9999px;
+                        opacity: 0;
+                        pointer-events: none;
+                        visibility: visible;
+                      "
+                    >
+                      <span
+                        data-z-index="1"
+                        style="
+                          font-family: -apple-system, BlinkMacSystemFont,
+                            'Avenir Next', Avenir, 'Segoe UI', 'Lucida Grande',
+                            'Helvetica Neue', Helvetica, 'Fira Sans', Roboto,
+                            Noto, 'Droid Sans', Cantarell, Oxygen, Ubuntu,
+                            'Franklin Gothic Medium', 'Century Gothic',
+                            'Liberation Sans', sans-serif;
+                          font-size: 12px;
+                          position: absolute;
+                          white-space: nowrap;
+                          color: rgb(255, 255, 255);
+                          cursor: default;
+                          margin-left: 0px;
+                          margin-top: 0px;
+                          left: 0px;
+                          top: 0px;
+                        "
+                        ><span style="font-size: 10px">Search</span><br /><span
+                          style="color: #fd578d"
+                          >●</span
+                        >
+                        Occurrences: <b>123,865</b><br
+                      /></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
