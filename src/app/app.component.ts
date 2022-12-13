@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import {UserService} from 'app/Services/User.service';
 
 @Component({
     selector   : 'app-root',
@@ -16,7 +15,7 @@ export class AppComponent
     /**
      * Constructor
      */
-    constructor(private _UserService : UserService, private router: Router, private activatedRoute: ActivatedRoute)
+    constructor( private router: Router, private activatedRoute: ActivatedRoute)
     {
         let weAccountList =  {'brandCode': 'CE7725599A', 'name': 'CapEngage', 'showJourney':true};
         console.log(weAccountList.brandCode)
