@@ -1,17 +1,4 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "dist/CapEngage/index.html",
-        "use": "@now/angular"
-      }
-    ],
-    "routes": [
-      {
-       
-        "src": "/(.*)",
-        
-        "dest": "dist/CapEngage/index.html"
-      }
-    ]
+    "version": 2
+    
   }
