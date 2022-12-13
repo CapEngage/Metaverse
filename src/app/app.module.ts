@@ -10,9 +10,10 @@ import { CoreModule } from 'app/core/core.module';
 import { appConfig } from 'app/core/config/app.config';
 import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
+import { DashboardModule } from './UI/dashboard.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
-import { DashboardModule } from './UI/dashboard.module';
+
 
 
 const routerConfig: ExtraOptions = {
