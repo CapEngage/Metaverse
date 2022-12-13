@@ -1,10 +1,17 @@
 {
     "version": 2,
-    "public": true,
-    "name": "capengae",
-     "functions": {
-      "api/index.js": {
-        "includeFiles": "dist/CapEngage/**"
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@now/node"
       }
-    }
+    ],
+    "routes": [
+      {
+       
+        "src": "/(.*)",
+        
+        "dest": "index.html"
+      }
+    ]
   }
