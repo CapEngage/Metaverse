@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import {UserService} from 'app/Services/User.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -17,7 +16,7 @@ export class UserListComponent implements OnInit {
   displayedColumns: string[] = [
       'id', 'Action', 'Name', 'Email', 'Phone', 'CreatedAt'
 ];
-  constructor(private _UserService : UserService, private activatedRoute: ActivatedRoute, private router: Router ) {
+  constructor(private _UserService : UserService ) {
     let brandCode =  localStorage.getItem('brandCode');
     //let BrandCode = this.activatedRoute.snapshot.paramMap.get('brandCode');
 

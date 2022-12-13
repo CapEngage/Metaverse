@@ -39,6 +39,7 @@ const routerConfig: ExtraOptions = {
 
         // Layout module of your application
         LayoutModule,
+        DashboardModule,
 
         // 3rd party modules that require global configuration via forRoot
         MarkdownModule.forRoot({}),
